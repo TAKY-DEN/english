@@ -402,7 +402,7 @@
             
             document.getElementById('totalSaved').textContent = stats.byLevel.a1.total;
             document.getElementById('dueToday').textContent = stats.byLevel.a1.dueToday;
-            document.getElementById('mastered').textContent = stats.mastered;
+            document.getElementById('mastered').textContent = stats.byLevel.a1.mastered || 0;
 
             // إذا لم يكن هناك كلمات محفوظة، نعرض رسالة
             if (stats.byLevel.a1.total === 0) {

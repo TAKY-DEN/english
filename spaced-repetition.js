@@ -180,7 +180,8 @@ class SpacedRepetitionSystem {
                 total: levelItems.length,
                 dueToday: levelDue.length,
                 vocab: levelItems.filter(item => item.type === 'vocab').length,
-                sentences: levelItems.filter(item => item.type === 'sentence').length
+                sentences: levelItems.filter(item => item.type === 'sentence').length,
+                mastered: levelItems.filter(item => item.reviewCount >= this.intervals.length - 1).length
             };
         });
         
