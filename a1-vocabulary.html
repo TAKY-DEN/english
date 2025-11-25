@@ -56,13 +56,17 @@
             transition: width 0.3s ease;
         }
         
+        .scroll-fill {
+            background: linear-gradient(90deg, #3498db, #2980b9) !important;
+        }
+        
         body {
-            padding-top: 100px !important;
+            padding-top: 130px !important;
         }
         
         .back-button {
             position: fixed;
-            top: 80px;
+            top: 110px;
             right: 20px;
             background: linear-gradient(45deg, #667eea, #764ba2);
             color: white;
@@ -14230,17 +14234,47 @@
     const level = 'a1';
     const type = 'vocab';
     
-    // تصفير البيانات الخاطئة (مرة واحدة فقط)
-    if (!localStorage.getItem('a1_vocab_cleaned')) {
-        // حذف البيانات الخاطئة من spacedRepetitionData
+    // تصفير شامل لجميع البيانات القديمة (مرة واحدة فقط)
+    if (!localStorage.getItem('a1_vocab_cleaned_v2')) {
+        console.log('🛠️ بدء التصفير الشامل...');
+        
+        // 1. حذف البيانات الخاطئة من spacedRepetitionData
         const spacedData = JSON.parse(localStorage.getItem('spacedRepetitionData') || '{}');
         const keysToDelete = Object.keys(spacedData).filter(key => key.includes('[object Object]'));
-        keysToDelete.forEach(key => delete spacedData[key]);
+        keysToDelete.forEach(key => {
+            console.log('🗑️ حذف:', key);
+            delete spacedData[key];
+        });
+        
+        // 2. حذف جميع بيانات A1 القديمة (إعادة تعيين)
+        Object.keys(spacedData).forEach(key => {
+            if (key.startsWith('a1_vocab_')) {
+                console.log('🗑️ حذف A1 القديم:', key);
+                delete spacedData[key];
+            }
+        });
+        
         localStorage.setItem('spacedRepetitionData', JSON.stringify(spacedData));
         
-        // وضع علامة أنه تم التنظيف
-        localStorage.setItem('a1_vocab_cleaned', 'true');
-        console.log('✅ تم تصفير البيانات الخاطئة');
+        // 3. حذف البيانات القديمة من englishCourseProgress
+        const oldProgress = JSON.parse(localStorage.getItem('englishCourseProgress') || '{}');
+        if (oldProgress.a1 && oldProgress.a1.vocab) {
+            console.log('🗑️ حذف englishCourseProgress.a1.vocab');
+            delete oldProgress.a1.vocab;
+            localStorage.setItem('englishCourseProgress', JSON.stringify(oldProgress));
+        }
+        
+        // 4. حذف saved_a1_vocab القديم
+        localStorage.removeItem('saved_a1_vocab');
+        console.log('🗑️ حذف saved_a1_vocab');
+        
+        // 5. وضع علامة أنه تم التنظيف
+        localStorage.setItem('a1_vocab_cleaned_v2', 'true');
+        console.log('✅ تم التصفير الشامل بنجاح!');
+        
+        // 6. إعادة تحميل الصفحة
+        alert('✅ تم تصفير البيانات القديمة! سيتم إعادة تحميل الصفحة...');
+        location.reload();
     }
     
     // تحميل الكلمات المحفوظة
@@ -14327,13 +14361,30 @@
                     <div class="progress-bar-fill" id="save-fill"></div>
                 </div>
             </div>
+            <div class="progress-row">
+                <div class="progress-label">📖 التقدم في القراءة: <span id="scroll-percent">0</span>%</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill scroll-fill" id="scroll-fill"></div>
+                </div>
+            </div>
         </div>
     `;
     document.body.insertBefore(progressBar, document.body.firstChild);
     
+    // تحديث شريط القراءة
+    function updateScrollProgress() {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100) || 0;
+        document.getElementById('scroll-percent').textContent = scrollPercent;
+        document.getElementById('scroll-fill').style.width = scrollPercent + '%';
+    }
+    
+    // مراقبة التمرير
+    window.addEventListener('scroll', updateScrollProgress);
+    window.addEventListener('resize', updateScrollProgress);
+    updateScrollProgress();
+    
     // تحديث شريط التقدم
-    function updateProgress() {
-        const total = document.querySelectorAll('.save-btn').length;
+    function updateProgressBar() {      const total = document.querySelectorAll('.save-btn').length;
         const savedWords = loadSavedWords();
         const saved = savedWords.length;
         const percent = total > 0 ? Math.round((saved / total) * 100) : 0;
@@ -14359,3 +14410,28 @@
 
 </body>
 </html>
+
+<script>
+// صوت النقر البسيط
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('save-btn')) {
+        // تشغيل صوت بسيط
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.value = 800;
+        oscillator.type = 'sine';
+        
+        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.1);
+    }
+});
+</script>
+
