@@ -14241,10 +14241,9 @@
                 
                 // إضافة لنظام المراجعة
                 if (window.SpacedRepetition) {
-                    window.SpacedRepetition.addItem(level, type, {
-                        index: index,
-                        word: word,
-                        translation: translation,
+                    window.SpacedRepetition.addItem(level, type, index, {
+                        english: word,
+                        arabic: translation,
                         pronunciation: pronunciation
                     });
                 }
