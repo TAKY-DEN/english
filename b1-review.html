@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>مراجعة المستوى B1 - كورس اللغة الإنجليزية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .review-container {
+            max-width: 900px;
+            margin: 80px auto 50px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .review-header {
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .review-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .review-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            background: #f8f9fa;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .review-modes {
+            padding: 2rem;
+        }
+
+        .mode-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .mode-card:hover {
+            transform: translateX(-10px);
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .mode-card h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mode-card p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .mode-icon {
+            font-size: 2.5rem;
+        }
+
+        .flashcard-container {
+            display: none;
+            padding: 2rem;
+        }
+
+        .flashcard {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            cursor: pointer;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-front, .flashcard-back {
+            backface-visibility: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+        }
+
+        .flashcard-back {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-word {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .flashcard-label {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .flashcard-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .flashcard-btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-know {
+            background: linear-gradient(45deg, #11998e, #38ef7d);
+            color: white;
+        }
+
+        .btn-know:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(17, 153, 142, 0.4);
+        }
+
+        .btn-dont-know {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+        }
+
+        .btn-dont-know:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-flip {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+
+        .btn-flip:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            height: 10px;
+            border-radius: 10px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(45deg, #11998e, #38ef7d);
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #666;
+        }
+
+        .empty-state-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .empty-state p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .empty-state a {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .review-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .flashcard-word {
+                font-size: 2rem;
+            }
+
+            .mode-card {
+                padding: 1.5rem;
+            }
+
+            .mode-card h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← العودة للرئيسية</a>
+
+    <div class="review-container">
+        <div class="review-header">
+            <h1>🔄 مراجعة المستوى B1</h1>
+            <p>نظام التكرار المتباعد والمراجعة السريعة</p>
+        </div>
+
+        <!-- الإحصائيات -->
+        <div class="review-stats" id="reviewStats">
+            <div class="stat-card">
+                <span class="stat-number" id="totalSaved">0</span>
+                <span class="stat-label">كلمة محفوظة</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="dueToday">0</span>
+                <span class="stat-label">للمراجعة اليوم</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="mastered">0</span>
+                <span class="stat-label">كلمة متقنة</span>
+            </div>
+        </div>
+
+        <!-- أوضاع المراجعة -->
+        <div class="review-modes" id="reviewModes">
+            <div class="mode-card" onclick="startSpacedRepetition()">
+                <h3><span class="mode-icon">📅</span> التكرار المتباعد</h3>
+                <p>راجع الكلمات المستحقة للمراجعة اليوم حسب نظام التكرار المتباعد العلمي. الكلمات التي تتذكرها ستظهر بعد فترات أطول تدريجياً.</p>
+            </div>
+
+            <div class="mode-card" onclick="startQuickReview()">
+                <h3><span class="mode-icon">⚡</span> المراجعة السريعة</h3>
+                <p>راجع جميع كلماتك المحفوظة بسرعة باستخدام البطاقات التعليمية (Flashcards). مثالي للمراجعة السريعة قبل الامتحانات.</p>
+            </div>
+        </div>
+
+        <!-- منطقة البطاقات التعليمية -->
+        <div class="flashcard-container" id="flashcardContainer">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+            <div class="progress-text" id="progressText">0 / 0</div>
+
+            <div class="flashcard" id="flashcard" onclick="flipCard()">
+                <div class="flashcard-front">
+                    <div class="flashcard-label">الكلمة الإنجليزية</div>
+                    <div class="flashcard-word" id="englishWord">Loading...</div>
+                    <button class="btn-flip">اقلب البطاقة 🔄</button>
+                </div>
+                <div class="flashcard-back">
+                    <div class="flashcard-label">الترجمة العربية</div>
+                    <div class="flashcard-word" id="arabicWord">...</div>
+                    <div class="flashcard-label" style="margin-top: 1rem;">طريقة النطق</div>
+                    <div class="flashcard-word" style="font-size: 1.8rem; color: #666;" id="pronunciation">...</div>
+                </div>
+            </div>
+
+            <div class="flashcard-actions">
+                <button class="flashcard-btn btn-dont-know" onclick="markCard(false)">❌ لا أعرفها</button>
+                <button class="flashcard-btn btn-know" onclick="markCard(true)">✅ أعرفها</button>
+            </div>
+
+            <button class="btn-flip" onclick="exitReview()" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); margin-top: 2rem;">إنهاء المراجعة</button>
+        </div>
+    </div>
+
+    <script src="spaced-repetition.js"></script>
+    <script src="click-sound.js"></script>
+    <script>
+        let currentMode = null;
+        let currentCards = [];
+        let currentIndex = 0;
+        let isFlipped = false;
+
+        // تحميل الإحصائيات عند فتح الصفحة
+        window.addEventListener('DOMContentLoaded', () => {
+            loadStatistics();
+        });
+
+        function loadStatistics() {
+            const stats = window.SpacedRepetition.getStatistics('b1');
+            
+            document.getElementById('totalSaved').textContent = stats.byLevel.b1.total;
+            document.getElementById('dueToday').textContent = stats.byLevel.b1.dueToday;
+            document.getElementById('mastered').textContent = stats.mastered;
+
+            // إذا لم يكن هناك كلمات محفوظة، نعرض رسالة
+            if (stats.byLevel.b1.total === 0) {
+                showEmptyState();
+            }
+        }
+
+        function showEmptyState() {
+            const modesDiv = document.getElementById('reviewModes');
+            modesDiv.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-state-icon">📚</div>
+                    <h3>لم تحفظ أي كلمات بعد!</h3>
+                    <p>ابدأ بحفظ بعض الكلمات من صفحة المفردات أو الجمل،<br>ثم عد هنا لمراجعتها باستخدام نظام التكرار المتباعد.</p>
+                    <a href="b1-vocabulary.html">📚 اذهب إلى المفردات</a>
+                    <a href="b1-sentences.html" style="margin-right: 1rem;">📝 اذهب إلى الجمل</a>
+                </div>
+            `;
+        }
+
+        function startSpacedRepetition() {
+            currentMode = 'spaced';
+            currentCards = window.SpacedRepetition.getDueItems('b1');
+            
+            if (currentCards.length === 0) {
+                alert('🎉 رائع! لا توجد كلمات للمراجعة اليوم.\nعد غداً للمراجعة القادمة!');
+                return;
+            }
+            
+            currentIndex = 0;
+            showFlashcardMode();
+            loadCard();
+        }
+
+        function startQuickReview() {
+            currentMode = 'quick';
+            currentCards = window.SpacedRepetition.getAllItems('b1');
+            
+            if (currentCards.length === 0) {
+                alert('📚 لم تحفظ أي كلمات بعد!\nاذهب إلى صفحة المفردات أو الجمل لحفظ بعض الكلمات.');
+                return;
+            }
+            
+            currentIndex = 0;
+            showFlashcardMode();
+            loadCard();
+        }
+
+        function showFlashcardMode() {
+            document.getElementById('reviewModes').style.display = 'none';
+            document.getElementById('flashcardContainer').style.display = 'block';
+        }
+
+        function loadCard() {
+            if (currentIndex >= currentCards.length) {
+                showCompletionMessage();
+                return;
+            }
+
+            const card = currentCards[currentIndex];
+            document.getElementById('englishWord').textContent = card.data.english;
+            document.getElementById('arabicWord').textContent = card.data.arabic;
+            document.getElementById('pronunciation').textContent = card.data.pronunciation || '';
+            
+            // تحديث شريط التقدم
+            const progress = ((currentIndex + 1) / currentCards.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('progressText').textContent = `${currentIndex + 1} / ${currentCards.length}`;
+            
+            // إعادة تعيين البطاقة
+            document.getElementById('flashcard').classList.remove('flipped');
+            isFlipped = false;
+        }
+
+        function flipCard() {
+            const flashcard = document.getElementById('flashcard');
+            flashcard.classList.toggle('flipped');
+            isFlipped = !isFlipped;
+        }
+
+        function markCard(remembered) {
+            const card = currentCards[currentIndex];
+            
+            // تسجيل المراجعة في نظام التكرار المتباعد
+            if (currentMode === 'spaced') {
+                window.SpacedRepetition.reviewItem(card.key, remembered);
+            }
+            
+            // الانتقال للبطاقة التالية
+            currentIndex++;
+            loadCard();
+        }
+
+        function showCompletionMessage() {
+            const container = document.getElementById('flashcardContainer');
+            container.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-state-icon">🎉</div>
+                    <h3>أحسنت! أكملت المراجعة</h3>
+                    <p>راجعت ${currentCards.length} كلمة بنجاح.<br>استمر في التعلم والمراجعة المنتظمة!</p>
+                    <a href="javascript:location.reload()">🔄 ابدأ مراجعة جديدة</a>
+                    <a href="index.html" style="margin-right: 1rem;">← العودة للرئيسية</a>
+                </div>
+            `;
+        }
+
+        function exitReview() {
+            if (confirm('هل تريد إنهاء المراجعة؟')) {
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>
+

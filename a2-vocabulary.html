@@ -1424,11 +1424,33 @@ body {
                 // تبديل الحالة
                 if (data[level][type][index]) {
                     delete data[level][type][index];
+                    // إزالة من نظام التكرار المتباعد
+                    if (window.SpacedRepetition) {
+                        window.SpacedRepetition.removeItem(level, type, index);
+                    }
                 } else {
                     data[level][type][index] = {
                         saved: true,
                         date: new Date().toISOString()
                     };
+                    
+                    // إضافة إلى نظام التكرار المتباعد
+                    if (window.SpacedRepetition) {
+                        // استخراج بيانات الكلمة من الصف
+                        const button = event.target;
+                        const row = button.closest('tr');
+                        const cells = row.querySelectorAll('td');
+                        
+                        if (cells.length >= 3) {
+                            const itemData = {
+                                english: cells[0].textContent.trim(),
+                                arabic: cells[1].textContent.trim(),
+                                pronunciation: cells[2].textContent.trim()
+                            };
+                            
+                            window.SpacedRepetition.addItem(level, type, index, itemData);
+                        }
+                    }
                 }
                 
                 // حفظ البيانات
