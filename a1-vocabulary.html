@@ -14384,9 +14384,16 @@
     updateScrollProgress();
     
     // تحديث شريط التقدم
-    function updateProgressBar() {      const total = document.querySelectorAll('.save-btn').length;
-        const savedWords = loadSavedWords();
-        const saved = savedWords.length;
+    function updateProgressBar() {
+        const total = document.querySelectorAll('.save-btn').length;
+        
+        // قراءة البيانات من نظام SpacedRepetition
+        let saved = 0;
+        if (window.SpacedRepetition) {
+            const allItems = window.SpacedRepetition.getAllItems(level, type);
+            saved = allItems.length;
+        }
+        
         const percent = total > 0 ? Math.round((saved / total) * 100) : 0;
         
         document.getElementById('save-count').textContent = saved;
@@ -14396,13 +14403,12 @@
     }
     
     // تحديث التقدم عند التحميل
-    updateProgress();
+    updateProgressBar();
     
     // تحديث التقدم عند النقر
-    const originalClick = document.onclick;
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('save-btn')) {
-            setTimeout(updateProgress, 100);
+            setTimeout(updateProgressBar, 100);
         }
     });
 })();
