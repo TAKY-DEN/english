@@ -1268,9 +1268,14 @@ body {
     // Update save progress
     function updateSaveProgress() {
         const total = document.querySelectorAll('tbody tr').length;
-        const data = JSON.parse(localStorage.getItem('englishCourseProgress') || '{}');
-        const saved = (data[level] && data[level][type]) ? 
-            Object.values(data[level][type]).filter(Boolean).length : 0;
+        
+        // قراءة البيانات من نظام SpacedRepetition
+        let saved = 0;
+        if (window.SpacedRepetition) {
+            const allItems = window.SpacedRepetition.getAllItems(level, type);
+            saved = allItems.length;
+        }
+        
         const percent = total > 0 ? Math.round((saved / total) * 100) : 0;
         
         document.getElementById('save-count').textContent = saved;
