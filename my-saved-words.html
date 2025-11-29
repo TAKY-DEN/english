@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>كلماتي المحفوظة - كورس اللغة الإنجليزية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 50px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            background: #f8f9fa;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .level-section {
+            padding: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .level-section:last-child {
+            border-bottom: none;
+        }
+
+        .level-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            padding: 1rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .level-header:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .level-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .level-count {
+            font-size: 1.2rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        .type-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .type-tab {
+            flex: 1;
+            padding: 1rem;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .type-tab.active {
+            background: linear-gradient(45deg, #11998e, #38ef7d);
+            color: white;
+        }
+
+        .words-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .word-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .word-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .word-english {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .word-arabic {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .word-pronunciation {
+            font-size: 1rem;
+            color: #999;
+            font-style: italic;
+        }
+
+        .word-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.7rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-review {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-review:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-delete {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+            color: white;
+        }
+
+        .btn-delete:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #666;
+        }
+
+        .empty-state-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .level-content {
+            display: none;
+        }
+
+        .level-content.active {
+            display: block;
+        }
+
+        .review-status {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .status-new {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .status-learning {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .status-mastered {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← العودة للرئيسية</a>
+
+    <div class="container">
+        <div class="header">
+            <h1>📚 كلماتي المحفوظة</h1>
+            <p>جميع الكلمات والجمل التي حفظتها من جميع المستويات</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number" id="totalWords">0</span>
+                <span class="stat-label">إجمالي الكلمات</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="totalSentences">0</span>
+                <span class="stat-label">إجمالي الجمل</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="dueToday">0</span>
+                <span class="stat-label">مستحق اليوم</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="masteredCount">0</span>
+                <span class="stat-label">متقن</span>
+            </div>
+        </div>
+
+        <div id="levelsContainer"></div>
+    </div>
+
+    <script src="spaced-repetition.js"></script>
+    <script>
+        // تحميل البيانات عند فتح الصفحة
+        window.addEventListener('DOMContentLoaded', () => {
+            loadAllSavedWords();
+        });
+
+        function loadAllSavedWords() {
+            const levels = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
+            const levelNames = {
+                'a1': 'A1 - مبتدئ',
+                'a2': 'A2 - مبتدئ متقدم',
+                'b1': 'B1 - متوسط',
+                'b2': 'B2 - متوسط متقدم',
+                'c1': 'C1 - متقدم',
+                'c2': 'C2 - إتقان'
+            };
+
+            let totalWords = 0;
+            let totalSentences = 0;
+            let totalDue = 0;
+            let totalMastered = 0;
+
+            const container = document.getElementById('levelsContainer');
+            container.innerHTML = '';
+
+            levels.forEach(level => {
+                const stats = window.SpacedRepetition.getStatistics(level);
+                const vocabItems = window.SpacedRepetition.getAllItems(level, 'vocab');
+                const sentenceItems = window.SpacedRepetition.getAllItems(level, 'sentence');
+
+                totalWords += vocabItems.length;
+                totalSentences += sentenceItems.length;
+                totalDue += stats.dueToday;
+                totalMastered += stats.mastered;
+
+                if (vocabItems.length > 0 || sentenceItems.length > 0) {
+                    const levelSection = createLevelSection(level, levelNames[level], vocabItems, sentenceItems);
+                    container.appendChild(levelSection);
+                }
+            });
+
+            // تحديث الإحصائيات
+            document.getElementById('totalWords').textContent = totalWords;
+            document.getElementById('totalSentences').textContent = totalSentences;
+            document.getElementById('dueToday').textContent = totalDue;
+            document.getElementById('masteredCount').textContent = totalMastered;
+
+            // إذا لم يكن هناك كلمات محفوظة
+            if (totalWords === 0 && totalSentences === 0) {
+                showEmptyState();
+            }
+        }
+
+        function createLevelSection(level, levelName, vocabItems, sentenceItems) {
+            const section = document.createElement('div');
+            section.className = 'level-section';
+            section.id = `level-${level}`;
+
+            const totalCount = vocabItems.length + sentenceItems.length;
+
+            section.innerHTML = `
+                <div class="level-header" onclick="toggleLevel('${level}')">
+                    <div class="level-title">${levelName}</div>
+                    <div class="level-count">${totalCount} عنصر</div>
+                </div>
+                <div class="level-content" id="content-${level}">
+                    <div class="type-tabs">
+                        <button class="type-tab active" onclick="showType('${level}', 'vocab')">
+                            📚 المفردات (${vocabItems.length})
+                        </button>
+                        <button class="type-tab" onclick="showType('${level}', 'sentence')">
+                            📝 الجمل (${sentenceItems.length})
+                        </button>
+                    </div>
+                    <div class="words-grid" id="grid-${level}-vocab">
+                        ${createWordCards(vocabItems, level, 'vocab')}
+                    </div>
+                    <div class="words-grid" id="grid-${level}-sentence" style="display: none;">
+                        ${createWordCards(sentenceItems, level, 'sentence')}
+                    </div>
+                </div>
+            `;
+
+            return section;
+        }
+
+        function createWordCards(items, level, type) {
+            if (items.length === 0) {
+                return `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📭</div>
+                        <h3>لا توجد ${type === 'vocab' ? 'مفردات' : 'جمل'} محفوظة</h3>
+                    </div>
+                `;
+            }
+
+            return items.map(item => {
+                const statusClass = item.reviewCount === 0 ? 'status-new' : 
+                                  item.reviewCount >= 4 ? 'status-mastered' : 'status-learning';
+                const statusText = item.reviewCount === 0 ? 'جديد' : 
+                                 item.reviewCount >= 4 ? 'متقن' : 'قيد التعلم';
+
+                return `
+                    <div class="word-card">
+                        <div class="word-english">${item.data.english}</div>
+                        <div class="word-arabic">${item.data.arabic}</div>
+                        <div class="word-pronunciation">${item.data.pronunciation || ''}</div>
+                        <div class="review-status ${statusClass}">${statusText}</div>
+                        <div class="word-actions">
+                            <button class="btn btn-review" onclick="goToReview('${level}')">
+                                🔄 مراجعة
+                            </button>
+                            <button class="btn btn-delete" onclick="deleteWord('${item.key}', '${level}', '${type}')">
+                                🗑️ حذف
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function toggleLevel(level) {
+            const content = document.getElementById(`content-${level}`);
+            content.classList.toggle('active');
+        }
+
+        function showType(level, type) {
+            // تحديث التبويبات
+            const tabs = document.querySelectorAll(`#level-${level} .type-tab`);
+            tabs.forEach((tab, index) => {
+                if ((index === 0 && type === 'vocab') || (index === 1 && type === 'sentence')) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            // إظهار/إخفاء الشبكات
+            document.getElementById(`grid-${level}-vocab`).style.display = type === 'vocab' ? 'grid' : 'none';
+            document.getElementById(`grid-${level}-sentence`).style.display = type === 'sentence' ? 'grid' : 'none';
+        }
+
+        function goToReview(level) {
+            window.location.href = `${level}-review.html`;
+        }
+
+        function deleteWord(key, level, type) {
+            if (confirm('هل أنت متأكد من حذف هذه الكلمة؟')) {
+                window.SpacedRepetition.removeItem(key);
+                loadAllSavedWords();
+            }
+        }
+
+        function showEmptyState() {
+            const container = document.getElementById('levelsContainer');
+            container.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-state-icon">📚</div>
+                    <h3>لم تحفظ أي كلمات بعد!</h3>
+                    <p>ابدأ بحفظ بعض الكلمات والجمل من صفحات المستويات المختلفة</p>
+                    <a href="index.html" class="btn btn-review" style="display: inline-block; margin-top: 1rem; text-decoration: none;">
+                        ← العودة للرئيسية
+                    </a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
