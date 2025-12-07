@@ -16230,16 +16230,14 @@
             const pronunciation = card.querySelector('.pronunciation-row .row-content').textContent;
             
             if (this.classList.contains('saved')) {
-                sr.removeItem(itemId);
+                sr.removeItem(level, type, index);
                 this.classList.remove('saved');
                 this.textContent = '💾 حفظ';
             } else {
-                sr.addItem(itemId, {
+                sr.addItem(level, type, index, {
                     english,
                     arabic,
-                    pronunciation,
-                    level,
-                    type
+                    pronunciation
                 });
                 this.classList.add('saved');
                 this.textContent = '✅ محفوظ';
