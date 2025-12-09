@@ -16183,9 +16183,11 @@ window.addEventListener('load', function() {
     
     // Update progress bar
     function updateProgressBar() {
-        const stats = sr.getStats();
-        const levelStats = stats.byLevel.a1;
-        const savedCount = levelStats.total;
+        // Count saved words directly
+        const allItems = sr.getAllItems();
+        const savedCount = allItems.filter(item => 
+            item.level === level && item.type === type
+        ).length;
         const totalWords = 991;
         
         document.getElementById('saved-count').textContent = savedCount;
