@@ -16181,6 +16181,32 @@ window.addEventListener('load', function() {
     // Initialize SpacedRepetition
     const sr = window.SpacedRepetition;
     
+    // Clean up corrupted data from old code
+    (function cleanupCorruptedData() {
+        const data = JSON.parse(localStorage.getItem('spacedRepetitionData') || '{}');
+        let cleaned = false;
+        
+        Object.keys(data).forEach(key => {
+            // Remove items with corrupted keys (containing [object Object])
+            if (key.includes('[object Object]') || key.includes('undefined')) {
+                console.log('Removing corrupted item:', key);
+                delete data[key];
+                cleaned = true;
+            }
+            // Remove items with corrupted level or type
+            else if (data[key] && (typeof data[key].level !== 'string' || typeof data[key].type !== 'string')) {
+                console.log('Removing item with corrupted level/type:', key);
+                delete data[key];
+                cleaned = true;
+            }
+        });
+        
+        if (cleaned) {
+            localStorage.setItem('spacedRepetitionData', JSON.stringify(data));
+            console.log('✅ Cleaned up corrupted data');
+        }
+    })();
+    
     // Update progress bar
     function updateProgressBar() {
         // Count saved words directly
