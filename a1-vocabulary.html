@@ -25,6 +25,33 @@
         .progress-content {
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .progress-bars {
+            flex: 1;
+        }
+        
+        .saved-words-link {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .saved-words-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
         }
         
         .progress-row {
@@ -236,18 +263,21 @@
 <!-- Fixed Progress Bars -->
 <div class="fixed-progress-bar">
     <div class="progress-content">
-        <div class="progress-row">
-            <div class="progress-label">📖 تقدم القراءة</div>
-            <div class="progress-bar-bg">
-                <div class="progress-bar-fill scroll-fill" id="scroll-progress"></div>
+        <div class="progress-bars">
+            <div class="progress-row">
+                <div class="progress-label">📖 تقدم القراءة</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill scroll-fill" id="scroll-progress"></div>
+                </div>
+            </div>
+            <div class="progress-row">
+                <div class="progress-label">💾 الكلمات المحفوظة: <span id="saved-count">0</span> / 991</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="save-progress"></div>
+                </div>
             </div>
         </div>
-        <div class="progress-row">
-            <div class="progress-label">💾 الكلمات المحفوظة: <span id="saved-count">0</span> / 991</div>
-            <div class="progress-bar-bg">
-                <div class="progress-bar-fill" id="save-progress"></div>
-            </div>
-        </div>
+        <a href="my-saved-words.html" class="saved-words-link">📚 كلماتي المحفوظة</a>
     </div>
 </div>
 
