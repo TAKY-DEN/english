@@ -16263,14 +16263,24 @@ window.addEventListener('load', function() {
     // Load saved words
     function loadSavedWords() {
         const cards = document.querySelectorAll('.sentence-card');
+        const savedItems = sr.getAllItems();
+        
         cards.forEach(card => {
             const index = card.dataset.index;
             const btn = card.querySelector('.save-btn');
-            const itemId = `${level}_${type}_${index}`;
+            const itemKey = `${level}_${type}_${index}`;
             
-            if (sr.hasItem(itemId)) {
+            // Check if this item is saved
+            const isSaved = savedItems.some(item => 
+                item.level === level && 
+                item.type === type && 
+                item.id === index
+            );
+            
+            if (isSaved) {
                 btn.classList.add('saved');
                 btn.textContent = '✅ محفوظ';
+                card.classList.add('saved');
             }
         });
         
