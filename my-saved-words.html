@@ -462,7 +462,9 @@
 
         function deleteWord(key, level, type) {
             if (confirm('هل أنت متأكد من حذف هذه الكلمة؟')) {
-                window.SpacedRepetition.removeItem(key);
+                // استخراج id من key (مثال: a1_vocab_1 → 1)
+                const id = key.split('_')[2];
+                window.SpacedRepetition.removeItem(level, type, id);
                 loadAllSavedWords();
             }
         }
