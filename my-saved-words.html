@@ -280,6 +280,59 @@
             background: #e8f5e9;
             color: #388e3c;
         }
+
+        .backup-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .backup-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .backup-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .backup-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .backup-btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .backup-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .export-btn {
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+            color: white;
+        }
+
+        .import-btn {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -307,6 +360,20 @@
             <div class="stat-card">
                 <span class="stat-number" id="masteredCount">0</span>
                 <span class="stat-label">متقن</span>
+            </div>
+        </div>
+
+        <div class="backup-section">
+            <h3>💾 النسخ الاحتياطي</h3>
+            <p>احفظ كلماتك المحفوظة في ملف لحمايتها من الحذف</p>
+            <div class="backup-buttons">
+                <button class="backup-btn export-btn" onclick="exportBackup()">
+                    📥 تصدير البيانات
+                </button>
+                <button class="backup-btn import-btn" onclick="document.getElementById('importFile').click()">
+                    📤 استيراد البيانات
+                </button>
+                <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importBackup(event)">
             </div>
         </div>
 
@@ -467,6 +534,35 @@
                 window.SpacedRepetition.removeItem(level, type, id);
                 loadAllSavedWords();
             }
+        }
+
+        function exportBackup() {
+            const sr = window.SpacedRepetition;
+            const allItems = sr.getAllItems();
+            
+            if (allItems.length === 0) {
+                alert('⚠️ لا توجد كلمات محفوظة لتصديرها!');
+                return;
+            }
+            
+            sr.exportData();
+            alert('✅ تم تصدير البيانات بنجاح!\n\nعدد الكلمات: ' + allItems.length);
+        }
+
+        async function importBackup(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const sr = window.SpacedRepetition;
+            const success = await sr.importData(file);
+            
+            if (success) {
+                alert('✅ تم استيراد البيانات بنجاح!');
+                loadAllSavedWords();
+            }
+            
+            // إعادة تعيين الملف input
+            event.target.value = '';
         }
 
         function showEmptyState() {
