@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>مفردات المستوى B1 - كورس اللغة الإنجليزية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-table-fix.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .vocabulary-container {
+            background: white;
+            margin: 100px auto 50px;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .vocabulary-header {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .vocabulary-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .vocabulary-table th {
+            background: #f8f9fa;
+            padding: 1rem;
+            font-weight: 600;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .vocabulary-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #dee2e6;
+            line-height: 1.6;
+        }
+        .vocabulary-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .vocabulary-table tr:hover {
+            background: #e3f2fd;
+        }
+        .back-button {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 1000;
+        }
+    
+
+
+
+
+
+
+
+
+
+.fixed-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    color: white;
+}
+
+.fixed-progress-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.progress-section {
+    margin-bottom: 10px;
+}
+
+.progress-section:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.scroll-fill {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+body {
+    padding-top: 120px !important;
+}
+
+
+/* Fixed Progress Container */
+.fixed-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 12px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    color: white;
+}
+
+.progress-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.progress-row {
+    margin-bottom: 8px;
+}
+
+.progress-row:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.scroll-bar-fill {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+body {
+    padding-top: 100px !important;
+}
+
+
+
+    
+    .vocabulary-table,
+    .sentences-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+    }
+    
+    /* للمفردات - 4 أعمدة */
+    .vocabulary-table th:nth-child(1),
+    .vocabulary-table td:nth-child(1) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(2),
+    .vocabulary-table td:nth-child(2) {
+        width: 30% !important;
+        max-width: 30% !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(4),
+    .vocabulary-table td:nth-child(4) {
+        width: 20% !important;
+        max-width: 20% !important;
+        text-align: center !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 35% !important;
+        max-width: 35% !important;
+    }
+    
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* للجمل - 2 أعمدة */
+    .sentences-table th:nth-child(1),
+    .sentences-table td:nth-child(1) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th:nth-child(2),
+    .sentences-table td:nth-child(2) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th,
+    .sentences-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .vocabulary-table th,
+    .vocabulary-table td,
+    .sentences-table th,
+    .sentences-table td {
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.15rem !important;
+    }
+}
+
+
+/* تحسين الجداول على الموبايل - إصلاح نهائي */
+@media (max-width: 768px) {
+    .vocabulary-container,
+    .sentences-container {
+        margin: 80px 0 20px !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+    }
+    
+    .table-wrapper {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    .vocabulary-table,
+    .sentences-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+    }
+    
+    /* للمفردات - 4 أعمدة */
+    .vocabulary-table th:nth-child(1),
+    .vocabulary-table td:nth-child(1) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(2),
+    .vocabulary-table td:nth-child(2) {
+        width: 30% !important;
+        max-width: 30% !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(4),
+    .vocabulary-table td:nth-child(4) {
+        width: 20% !important;
+        max-width: 20% !important;
+        text-align: center !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 35% !important;
+        max-width: 35% !important;
+    }
+    
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* للجمل - 2 أعمدة */
+    .sentences-table th:nth-child(1),
+    .sentences-table td:nth-child(1) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th:nth-child(2),
+    .sentences-table td:nth-child(2) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th,
+    .sentences-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .vocabulary-table th,
+    .vocabulary-table td,
+    .sentences-table th,
+    .sentences-table td {
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.15rem !important;
+    }
+}
+
+
+    .save-btn {
+        padding: 0.4rem 0.6rem;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .save-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+    
+    .save-btn.saved {
+        background: linear-gradient(45deg, #2ecc71, #27ae60);
+    }
+    
+    @media (max-width: 768px) {
+        .save-btn {
+            padding: 0.3rem 0.4rem;
+            font-size: 0.7rem;
+        }
+    }
+
+</style>
+    <script src="spaced-repetition.js"></script>
+</head>
+<body data-level="b1" data-type="vocab">
+    <a href="index.html" class="back-button">← العودة للرئيسية</a>
+    
+    <div class="vocabulary-container">
+        <div class="vocabulary-header">
+            <h1>مفردات المستوى B1</h1>
+            <p>1700 كلمة متقدمة مع الترجمة العربية وطريقة النطق</p>
+            <p>مفردات متخصصة في الإدارة والمحاسبة والتسويق والحياة اليومية المتقدمة</p>
+        </div>
+        
+        <div class="table-wrapper"><table class="vocabulary-table">
+            <thead>
+                <tr>
+                    <th>الكلمة الإنجليزية</th>
+                    <th>الترجمة العربية</th>
+                    <th>طريقة النطق</th>
+                    <th>الحفظ</th>
+</tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Achievement</strong></td><td><strong>إنجاز</strong></td><td><strong>أتشيفمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="1" onclick="window.SaveSystem.save('b1', 'vocab', 1)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Administration</strong></td><td><strong>إدارة</strong></td><td><strong>أدمينيستريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="2" onclick="window.SaveSystem.save('b1', 'vocab', 2)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Advancement</strong></td><td><strong>تقدم</strong></td><td><strong>أدفانسمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="3" onclick="window.SaveSystem.save('b1', 'vocab', 3)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Advantage</strong></td><td><strong>ميزة</strong></td><td><strong>أدفانتيج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="4" onclick="window.SaveSystem.save('b1', 'vocab', 4)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Advertisement</strong></td><td><strong>إعلان</strong></td><td><strong>أدفرتايزمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="5" onclick="window.SaveSystem.save('b1', 'vocab', 5)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Advisor</strong></td><td><strong>مستشار</strong></td><td><strong>أدفايزر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="6" onclick="window.SaveSystem.save('b1', 'vocab', 6)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Affiliation</strong></td><td><strong>انتماء</strong></td><td><strong>أفيليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="7" onclick="window.SaveSystem.save('b1', 'vocab', 7)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Agenda</strong></td><td><strong>جدول أعمال</strong></td><td><strong>أجندا</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="8" onclick="window.SaveSystem.save('b1', 'vocab', 8)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Agreement</strong></td><td><strong>اتفاقية</strong></td><td><strong>أغريمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="9" onclick="window.SaveSystem.save('b1', 'vocab', 9)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Algorithm</strong></td><td><strong>خوارزمية</strong></td><td><strong>ألغوريذم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="10" onclick="window.SaveSystem.save('b1', 'vocab', 10)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Alliance</strong></td><td><strong>تحالف</strong></td><td><strong>ألاينس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="11" onclick="window.SaveSystem.save('b1', 'vocab', 11)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Allocation</strong></td><td><strong>تخصيص</strong></td><td><strong>ألوكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="12" onclick="window.SaveSystem.save('b1', 'vocab', 12)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Alternative</strong></td><td><strong>بديل</strong></td><td><strong>ألترنيتيف</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="13" onclick="window.SaveSystem.save('b1', 'vocab', 13)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Amendment</strong></td><td><strong>تعديل</strong></td><td><strong>أميندمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="14" onclick="window.SaveSystem.save('b1', 'vocab', 14)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Analysis</strong></td><td><strong>تحليل</strong></td><td><strong>أناليسيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="15" onclick="window.SaveSystem.save('b1', 'vocab', 15)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Announcement</strong></td><td><strong>إعلان</strong></td><td><strong>أناونسمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="16" onclick="window.SaveSystem.save('b1', 'vocab', 16)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Application</strong></td><td><strong>تطبيق</strong></td><td><strong>أبليكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="17" onclick="window.SaveSystem.save('b1', 'vocab', 17)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Appointment</strong></td><td><strong>موعد</strong></td><td><strong>أبوينتمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="18" onclick="window.SaveSystem.save('b1', 'vocab', 18)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Appreciation</strong></td><td><strong>تقدير</strong></td><td><strong>أبريسييشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="19" onclick="window.SaveSystem.save('b1', 'vocab', 19)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Approach</strong></td><td><strong>نهج</strong></td><td><strong>أبروتش</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="20" onclick="window.SaveSystem.save('b1', 'vocab', 20)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Approval</strong></td><td><strong>موافقة</strong></td><td><strong>أبروفال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="21" onclick="window.SaveSystem.save('b1', 'vocab', 21)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Architecture</strong></td><td><strong>هندسة معمارية</strong></td><td><strong>آركيتكتشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="22" onclick="window.SaveSystem.save('b1', 'vocab', 22)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Arrangement</strong></td><td><strong>ترتيب</strong></td><td><strong>أرينجمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="23" onclick="window.SaveSystem.save('b1', 'vocab', 23)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Assessment</strong></td><td><strong>تقييم</strong></td><td><strong>أسيسمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="24" onclick="window.SaveSystem.save('b1', 'vocab', 24)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Assignment</strong></td><td><strong>مهمة</strong></td><td><strong>أسايمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="25" onclick="window.SaveSystem.save('b1', 'vocab', 25)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Assistance</strong></td><td><strong>مساعدة</strong></td><td><strong>أسيستنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="26" onclick="window.SaveSystem.save('b1', 'vocab', 26)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Association</strong></td><td><strong>جمعية</strong></td><td><strong>أسوسييشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="27" onclick="window.SaveSystem.save('b1', 'vocab', 27)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Assumption</strong></td><td><strong>افتراض</strong></td><td><strong>أسامبشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="28" onclick="window.SaveSystem.save('b1', 'vocab', 28)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Assurance</strong></td><td><strong>ضمان</strong></td><td><strong>أشورانس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="29" onclick="window.SaveSystem.save('b1', 'vocab', 29)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Attachment</strong></td><td><strong>مرفق</strong></td><td><strong>أتاتشمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="30" onclick="window.SaveSystem.save('b1', 'vocab', 30)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Attendance</strong></td><td><strong>حضور</strong></td><td><strong>أتيندنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="31" onclick="window.SaveSystem.save('b1', 'vocab', 31)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Attention</strong></td><td><strong>انتباه</strong></td><td><strong>أتينشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="32" onclick="window.SaveSystem.save('b1', 'vocab', 32)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Attitude</strong></td><td><strong>موقف</strong></td><td><strong>أتيتيود</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="33" onclick="window.SaveSystem.save('b1', 'vocab', 33)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Attraction</strong></td><td><strong>جذب</strong></td><td><strong>أتراكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="34" onclick="window.SaveSystem.save('b1', 'vocab', 34)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Attribute</strong></td><td><strong>خاصية</strong></td><td><strong>أتريبيوت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="35" onclick="window.SaveSystem.save('b1', 'vocab', 35)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Audience</strong></td><td><strong>جمهور</strong></td><td><strong>أوديينس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="36" onclick="window.SaveSystem.save('b1', 'vocab', 36)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Authority</strong></td><td><strong>سلطة</strong></td><td><strong>أوثوريتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="37" onclick="window.SaveSystem.save('b1', 'vocab', 37)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Authorization</strong></td><td><strong>تفويض</strong></td><td><strong>أوثورايزيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="38" onclick="window.SaveSystem.save('b1', 'vocab', 38)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Automation</strong></td><td><strong>أتمتة</strong></td><td><strong>أوتوميشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="39" onclick="window.SaveSystem.save('b1', 'vocab', 39)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Availability</strong></td><td><strong>توفر</strong></td><td><strong>أفيلابيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="40" onclick="window.SaveSystem.save('b1', 'vocab', 40)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Background</strong></td><td><strong>خلفية</strong></td><td><strong>باكغراوند</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="41" onclick="window.SaveSystem.save('b1', 'vocab', 41)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Balance</strong></td><td><strong>توازن</strong></td><td><strong>بالانس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="42" onclick="window.SaveSystem.save('b1', 'vocab', 42)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Bandwidth</strong></td><td><strong>عرض النطاق</strong></td><td><strong>باندويدث</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="43" onclick="window.SaveSystem.save('b1', 'vocab', 43)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Baseline</strong></td><td><strong>خط الأساس</strong></td><td><strong>بيسلاين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="44" onclick="window.SaveSystem.save('b1', 'vocab', 44)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Behavior</strong></td><td><strong>سلوك</strong></td><td><strong>بيهيفيور</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="45" onclick="window.SaveSystem.save('b1', 'vocab', 45)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Benchmark</strong></td><td><strong>معيار</strong></td><td><strong>بينتشمارك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="46" onclick="window.SaveSystem.save('b1', 'vocab', 46)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Benefit</strong></td><td><strong>فائدة</strong></td><td><strong>بينيفيت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="47" onclick="window.SaveSystem.save('b1', 'vocab', 47)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Blueprint</strong></td><td><strong>مخطط</strong></td><td><strong>بلوبرينت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="48" onclick="window.SaveSystem.save('b1', 'vocab', 48)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Boundary</strong></td><td><strong>حدود</strong></td><td><strong>باوندري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="49" onclick="window.SaveSystem.save('b1', 'vocab', 49)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Brainstorming</strong></td><td><strong>عصف ذهني</strong></td><td><strong>برينستورمينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="50" onclick="window.SaveSystem.save('b1', 'vocab', 50)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Breakthrough</strong></td><td><strong>اختراق</strong></td><td><strong>بريكثرو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="51" onclick="window.SaveSystem.save('b1', 'vocab', 51)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Budget</strong></td><td><strong>ميزانية</strong></td><td><strong>بادجت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="52" onclick="window.SaveSystem.save('b1', 'vocab', 52)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Bureaucracy</strong></td><td><strong>بيروقراطية</strong></td><td><strong>بيوروكراسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="53" onclick="window.SaveSystem.save('b1', 'vocab', 53)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Business</strong></td><td><strong>أعمال</strong></td><td><strong>بيزنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="54" onclick="window.SaveSystem.save('b1', 'vocab', 54)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Calculation</strong></td><td><strong>حساب</strong></td><td><strong>كالكيوليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="55" onclick="window.SaveSystem.save('b1', 'vocab', 55)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Campaign</strong></td><td><strong>حملة</strong></td><td><strong>كامبين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="56" onclick="window.SaveSystem.save('b1', 'vocab', 56)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Capability</strong></td><td><strong>قدرة</strong></td><td><strong>كيبابيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="57" onclick="window.SaveSystem.save('b1', 'vocab', 57)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Capacity</strong></td><td><strong>سعة</strong></td><td><strong>كاباسيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="58" onclick="window.SaveSystem.save('b1', 'vocab', 58)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Capital</strong></td><td><strong>رأس مال</strong></td><td><strong>كابيتال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="59" onclick="window.SaveSystem.save('b1', 'vocab', 59)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Category</strong></td><td><strong>فئة</strong></td><td><strong>كاتيغوري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="60" onclick="window.SaveSystem.save('b1', 'vocab', 60)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Challenge</strong></td><td><strong>تحدي</strong></td><td><strong>تشالينج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="61" onclick="window.SaveSystem.save('b1', 'vocab', 61)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Channel</strong></td><td><strong>قناة</strong></td><td><strong>تشانل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="62" onclick="window.SaveSystem.save('b1', 'vocab', 62)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Characteristic</strong></td><td><strong>خاصية</strong></td><td><strong>كاراكتيريستيك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="63" onclick="window.SaveSystem.save('b1', 'vocab', 63)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Circulation</strong></td><td><strong>تداول</strong></td><td><strong>سيركيوليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="64" onclick="window.SaveSystem.save('b1', 'vocab', 64)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Classification</strong></td><td><strong>تصنيف</strong></td><td><strong>كلاسيفيكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="65" onclick="window.SaveSystem.save('b1', 'vocab', 65)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Collaboration</strong></td><td><strong>تعاون</strong></td><td><strong>كولابوريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="66" onclick="window.SaveSystem.save('b1', 'vocab', 66)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Collection</strong></td><td><strong>مجموعة</strong></td><td><strong>كوليكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="67" onclick="window.SaveSystem.save('b1', 'vocab', 67)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Combination</strong></td><td><strong>مزيج</strong></td><td><strong>كومبينيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="68" onclick="window.SaveSystem.save('b1', 'vocab', 68)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Commission</strong></td><td><strong>عمولة</strong></td><td><strong>كوميشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="69" onclick="window.SaveSystem.save('b1', 'vocab', 69)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Commitment</strong></td><td><strong>التزام</strong></td><td><strong>كوميتمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="70" onclick="window.SaveSystem.save('b1', 'vocab', 70)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Committee</strong></td><td><strong>لجنة</strong></td><td><strong>كوميتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="71" onclick="window.SaveSystem.save('b1', 'vocab', 71)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Communication</strong></td><td><strong>تواصل</strong></td><td><strong>كومونيكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="72" onclick="window.SaveSystem.save('b1', 'vocab', 72)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Community</strong></td><td><strong>مجتمع</strong></td><td><strong>كومونيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="73" onclick="window.SaveSystem.save('b1', 'vocab', 73)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Comparison</strong></td><td><strong>مقارنة</strong></td><td><strong>كومباريزن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="74" onclick="window.SaveSystem.save('b1', 'vocab', 74)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Compensation</strong></td><td><strong>تعويض</strong></td><td><strong>كومبنسيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="75" onclick="window.SaveSystem.save('b1', 'vocab', 75)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Competition</strong></td><td><strong>منافسة</strong></td><td><strong>كومبيتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="76" onclick="window.SaveSystem.save('b1', 'vocab', 76)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Competitive</strong></td><td><strong>تنافسي</strong></td><td><strong>كومبيتيتيف</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="77" onclick="window.SaveSystem.save('b1', 'vocab', 77)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Competitor</strong></td><td><strong>منافس</strong></td><td><strong>كومبيتيتور</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="78" onclick="window.SaveSystem.save('b1', 'vocab', 78)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Compilation</strong></td><td><strong>تجميع</strong></td><td><strong>كومبيليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="79" onclick="window.SaveSystem.save('b1', 'vocab', 79)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Complaint</strong></td><td><strong>شكوى</strong></td><td><strong>كومبلينت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="80" onclick="window.SaveSystem.save('b1', 'vocab', 80)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Compliance</strong></td><td><strong>امتثال</strong></td><td><strong>كومبلاينس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="81" onclick="window.SaveSystem.save('b1', 'vocab', 81)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Component</strong></td><td><strong>مكون</strong></td><td><strong>كومبونينت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="82" onclick="window.SaveSystem.save('b1', 'vocab', 82)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Composition</strong></td><td><strong>تركيب</strong></td><td><strong>كومبوزيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="83" onclick="window.SaveSystem.save('b1', 'vocab', 83)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Comprehensive</strong></td><td><strong>شامل</strong></td><td><strong>كومبريهنسيف</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="84" onclick="window.SaveSystem.save('b1', 'vocab', 84)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Compromise</strong></td><td><strong>تسوية</strong></td><td><strong>كومبرومايز</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="85" onclick="window.SaveSystem.save('b1', 'vocab', 85)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Concentration</strong></td><td><strong>تركيز</strong></td><td><strong>كونسنتريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="86" onclick="window.SaveSystem.save('b1', 'vocab', 86)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Concept</strong></td><td><strong>مفهوم</strong></td><td><strong>كونسيبت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="87" onclick="window.SaveSystem.save('b1', 'vocab', 87)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Conclusion</strong></td><td><strong>خلاصة</strong></td><td><strong>كونكلوجن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="88" onclick="window.SaveSystem.save('b1', 'vocab', 88)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Condition</strong></td><td><strong>شرط</strong></td><td><strong>كونديشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="89" onclick="window.SaveSystem.save('b1', 'vocab', 89)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Conference</strong></td><td><strong>مؤتمر</strong></td><td><strong>كونفرنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="90" onclick="window.SaveSystem.save('b1', 'vocab', 90)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Configuration</strong></td><td><strong>تكوين</strong></td><td><strong>كونفيغيوريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="91" onclick="window.SaveSystem.save('b1', 'vocab', 91)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Confirmation</strong></td><td><strong>تأكيد</strong></td><td><strong>كونفيرميشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="92" onclick="window.SaveSystem.save('b1', 'vocab', 92)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Connection</strong></td><td><strong>اتصال</strong></td><td><strong>كونيكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="93" onclick="window.SaveSystem.save('b1', 'vocab', 93)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Consequence</strong></td><td><strong>نتيجة</strong></td><td><strong>كونسيكوينس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="94" onclick="window.SaveSystem.save('b1', 'vocab', 94)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Consideration</strong></td><td><strong>اعتبار</strong></td><td><strong>كونسيديريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="95" onclick="window.SaveSystem.save('b1', 'vocab', 95)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Consistency</strong></td><td><strong>اتساق</strong></td><td><strong>كونسيستنسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="96" onclick="window.SaveSystem.save('b1', 'vocab', 96)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Consolidation</strong></td><td><strong>توحيد</strong></td><td><strong>كونسوليديشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="97" onclick="window.SaveSystem.save('b1', 'vocab', 97)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Construction</strong></td><td><strong>بناء</strong></td><td><strong>كونستراكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="98" onclick="window.SaveSystem.save('b1', 'vocab', 98)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Consultation</strong></td><td><strong>استشارة</strong></td><td><strong>كونسلتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="99" onclick="window.SaveSystem.save('b1', 'vocab', 99)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Consumer</strong></td><td><strong>مستهلك</strong></td><td><strong>كونسيومر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="100" onclick="window.SaveSystem.save('b1', 'vocab', 100)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Consumption</strong></td><td><strong>استهلاك</strong></td><td><strong>كونسامبشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="101" onclick="window.SaveSystem.save('b1', 'vocab', 101)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Contact</strong></td><td><strong>اتصال</strong></td><td><strong>كونتاكت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="102" onclick="window.SaveSystem.save('b1', 'vocab', 102)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Container</strong></td><td><strong>حاوية</strong></td><td><strong>كونتينر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="103" onclick="window.SaveSystem.save('b1', 'vocab', 103)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Content</strong></td><td><strong>محتوى</strong></td><td><strong>كونتنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="104" onclick="window.SaveSystem.save('b1', 'vocab', 104)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Context</strong></td><td><strong>سياق</strong></td><td><strong>كونتكست</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="105" onclick="window.SaveSystem.save('b1', 'vocab', 105)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Contract</strong></td><td><strong>عقد</strong></td><td><strong>كونتراكت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="106" onclick="window.SaveSystem.save('b1', 'vocab', 106)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Contribution</strong></td><td><strong>مساهمة</strong></td><td><strong>كونتريبيوشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="107" onclick="window.SaveSystem.save('b1', 'vocab', 107)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Control</strong></td><td><strong>تحكم</strong></td><td><strong>كونترول</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="108" onclick="window.SaveSystem.save('b1', 'vocab', 108)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Convention</strong></td><td><strong>اتفاقية</strong></td><td><strong>كونفنشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="109" onclick="window.SaveSystem.save('b1', 'vocab', 109)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Conversion</strong></td><td><strong>تحويل</strong></td><td><strong>كونفرجن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="110" onclick="window.SaveSystem.save('b1', 'vocab', 110)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Cooperation</strong></td><td><strong>تعاون</strong></td><td><strong>كوأوبريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="111" onclick="window.SaveSystem.save('b1', 'vocab', 111)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Coordination</strong></td><td><strong>تنسيق</strong></td><td><strong>كوأوردينيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="112" onclick="window.SaveSystem.save('b1', 'vocab', 112)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Corporation</strong></td><td><strong>شركة</strong></td><td><strong>كوربوريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="113" onclick="window.SaveSystem.save('b1', 'vocab', 113)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Correction</strong></td><td><strong>تصحيح</strong></td><td><strong>كوريكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="114" onclick="window.SaveSystem.save('b1', 'vocab', 114)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Correlation</strong></td><td><strong>ارتباط</strong></td><td><strong>كوريليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="115" onclick="window.SaveSystem.save('b1', 'vocab', 115)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Correspondence</strong></td><td><strong>مراسلة</strong></td><td><strong>كوريسبوندنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="116" onclick="window.SaveSystem.save('b1', 'vocab', 116)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Coverage</strong></td><td><strong>تغطية</strong></td><td><strong>كافريج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="117" onclick="window.SaveSystem.save('b1', 'vocab', 117)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Creation</strong></td><td><strong>إنشاء</strong></td><td><strong>كرييشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="118" onclick="window.SaveSystem.save('b1', 'vocab', 118)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Creativity</strong></td><td><strong>إبداع</strong></td><td><strong>كرييتيفيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="119" onclick="window.SaveSystem.save('b1', 'vocab', 119)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Credibility</strong></td><td><strong>مصداقية</strong></td><td><strong>كريديبيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="120" onclick="window.SaveSystem.save('b1', 'vocab', 120)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Criteria</strong></td><td><strong>معايير</strong></td><td><strong>كرايتيريا</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="121" onclick="window.SaveSystem.save('b1', 'vocab', 121)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Culture</strong></td><td><strong>ثقافة</strong></td><td><strong>كالتشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="122" onclick="window.SaveSystem.save('b1', 'vocab', 122)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Currency</strong></td><td><strong>عملة</strong></td><td><strong>كيرنسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="123" onclick="window.SaveSystem.save('b1', 'vocab', 123)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Customer</strong></td><td><strong>عميل</strong></td><td><strong>كاستومر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="124" onclick="window.SaveSystem.save('b1', 'vocab', 124)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Customization</strong></td><td><strong>تخصيص</strong></td><td><strong>كاستومايزيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="125" onclick="window.SaveSystem.save('b1', 'vocab', 125)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Database</strong></td><td><strong>قاعدة بيانات</strong></td><td><strong>ديتابيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="126" onclick="window.SaveSystem.save('b1', 'vocab', 126)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Deadline</strong></td><td><strong>موعد نهائي</strong></td><td><strong>ديدلاين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="127" onclick="window.SaveSystem.save('b1', 'vocab', 127)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Decision</strong></td><td><strong>قرار</strong></td><td><strong>ديسيجن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="128" onclick="window.SaveSystem.save('b1', 'vocab', 128)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Declaration</strong></td><td><strong>إعلان</strong></td><td><strong>ديكليريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="129" onclick="window.SaveSystem.save('b1', 'vocab', 129)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Deduction</strong></td><td><strong>خصم</strong></td><td><strong>ديداكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="130" onclick="window.SaveSystem.save('b1', 'vocab', 130)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Definition</strong></td><td><strong>تعريف</strong></td><td><strong>ديفينيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="131" onclick="window.SaveSystem.save('b1', 'vocab', 131)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Delegation</strong></td><td><strong>تفويض</strong></td><td><strong>ديليغيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="132" onclick="window.SaveSystem.save('b1', 'vocab', 132)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Delivery</strong></td><td><strong>تسليم</strong></td><td><strong>ديليفري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="133" onclick="window.SaveSystem.save('b1', 'vocab', 133)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Demand</strong></td><td><strong>طلب</strong></td><td><strong>ديماند</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="134" onclick="window.SaveSystem.save('b1', 'vocab', 134)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Democracy</strong></td><td><strong>ديمقراطية</strong></td><td><strong>ديموكراسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="135" onclick="window.SaveSystem.save('b1', 'vocab', 135)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Demonstration</strong></td><td><strong>عرض توضيحي</strong></td><td><strong>ديمونستريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="136" onclick="window.SaveSystem.save('b1', 'vocab', 136)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Department</strong></td><td><strong>قسم</strong></td><td><strong>ديبارتمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="137" onclick="window.SaveSystem.save('b1', 'vocab', 137)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Dependency</strong></td><td><strong>اعتماد</strong></td><td><strong>ديبيندنسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="138" onclick="window.SaveSystem.save('b1', 'vocab', 138)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Deployment</strong></td><td><strong>نشر</strong></td><td><strong>ديبلويمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="139" onclick="window.SaveSystem.save('b1', 'vocab', 139)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Description</strong></td><td><strong>وصف</strong></td><td><strong>ديسكريبشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="140" onclick="window.SaveSystem.save('b1', 'vocab', 140)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Design</strong></td><td><strong>تصميم</strong></td><td><strong>ديزاين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="141" onclick="window.SaveSystem.save('b1', 'vocab', 141)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Destination</strong></td><td><strong>وجهة</strong></td><td><strong>ديستينيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="142" onclick="window.SaveSystem.save('b1', 'vocab', 142)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Detail</strong></td><td><strong>تفصيل</strong></td><td><strong>ديتيل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="143" onclick="window.SaveSystem.save('b1', 'vocab', 143)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Detection</strong></td><td><strong>اكتشاف</strong></td><td><strong>ديتيكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="144" onclick="window.SaveSystem.save('b1', 'vocab', 144)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Determination</strong></td><td><strong>تصميم</strong></td><td><strong>ديترمينيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="145" onclick="window.SaveSystem.save('b1', 'vocab', 145)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Development</strong></td><td><strong>تطوير</strong></td><td><strong>ديفيلوبمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="146" onclick="window.SaveSystem.save('b1', 'vocab', 146)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Deviation</strong></td><td><strong>انحراف</strong></td><td><strong>ديفييشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="147" onclick="window.SaveSystem.save('b1', 'vocab', 147)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Diagnosis</strong></td><td><strong>تشخيص</strong></td><td><strong>دايغنوسيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="148" onclick="window.SaveSystem.save('b1', 'vocab', 148)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Dialogue</strong></td><td><strong>حوار</strong></td><td><strong>دايلوغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="149" onclick="window.SaveSystem.save('b1', 'vocab', 149)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Difference</strong></td><td><strong>فرق</strong></td><td><strong>ديفرنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="150" onclick="window.SaveSystem.save('b1', 'vocab', 150)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Dimension</strong></td><td><strong>بعد</strong></td><td><strong>ديمينشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="151" onclick="window.SaveSystem.save('b1', 'vocab', 151)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Direction</strong></td><td><strong>اتجاه</strong></td><td><strong>ديريكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="152" onclick="window.SaveSystem.save('b1', 'vocab', 152)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Directory</strong></td><td><strong>دليل</strong></td><td><strong>ديريكتوري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="153" onclick="window.SaveSystem.save('b1', 'vocab', 153)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Discipline</strong></td><td><strong>انضباط</strong></td><td><strong>ديسيبلين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="154" onclick="window.SaveSystem.save('b1', 'vocab', 154)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Disclosure</strong></td><td><strong>إفصاح</strong></td><td><strong>ديسكلوجر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="155" onclick="window.SaveSystem.save('b1', 'vocab', 155)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Discussion</strong></td><td><strong>مناقشة</strong></td><td><strong>ديسكاشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="156" onclick="window.SaveSystem.save('b1', 'vocab', 156)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Distribution</strong></td><td><strong>توزيع</strong></td><td><strong>ديستريبيوشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="157" onclick="window.SaveSystem.save('b1', 'vocab', 157)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Diversity</strong></td><td><strong>تنوع</strong></td><td><strong>دايفرسيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="158" onclick="window.SaveSystem.save('b1', 'vocab', 158)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Division</strong></td><td><strong>قسم</strong></td><td><strong>ديفيجن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="159" onclick="window.SaveSystem.save('b1', 'vocab', 159)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Documentation</strong></td><td><strong>توثيق</strong></td><td><strong>دوكيومنتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="160" onclick="window.SaveSystem.save('b1', 'vocab', 160)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Domain</strong></td><td><strong>مجال</strong></td><td><strong>دومين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="161" onclick="window.SaveSystem.save('b1', 'vocab', 161)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Duration</strong></td><td><strong>مدة</strong></td><td><strong>ديوريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="162" onclick="window.SaveSystem.save('b1', 'vocab', 162)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Economy</strong></td><td><strong>اقتصاد</strong></td><td><strong>إيكونومي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="163" onclick="window.SaveSystem.save('b1', 'vocab', 163)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Education</strong></td><td><strong>تعليم</strong></td><td><strong>إديوكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="164" onclick="window.SaveSystem.save('b1', 'vocab', 164)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Effectiveness</strong></td><td><strong>فعالية</strong></td><td><strong>إيفيكتيفنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="165" onclick="window.SaveSystem.save('b1', 'vocab', 165)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Efficiency</strong></td><td><strong>كفاءة</strong></td><td><strong>إيفيشنسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="166" onclick="window.SaveSystem.save('b1', 'vocab', 166)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Element</strong></td><td><strong>عنصر</strong></td><td><strong>إليمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="167" onclick="window.SaveSystem.save('b1', 'vocab', 167)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Emergency</strong></td><td><strong>طوارئ</strong></td><td><strong>إيمرجنسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="168" onclick="window.SaveSystem.save('b1', 'vocab', 168)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Employee</strong></td><td><strong>موظف</strong></td><td><strong>إمبلويي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="169" onclick="window.SaveSystem.save('b1', 'vocab', 169)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Employment</strong></td><td><strong>توظيف</strong></td><td><strong>إمبلويمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="170" onclick="window.SaveSystem.save('b1', 'vocab', 170)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Engagement</strong></td><td><strong>مشاركة</strong></td><td><strong>إنغيجمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="171" onclick="window.SaveSystem.save('b1', 'vocab', 171)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Engineering</strong></td><td><strong>هندسة</strong></td><td><strong>إنجينيرينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="172" onclick="window.SaveSystem.save('b1', 'vocab', 172)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Enhancement</strong></td><td><strong>تحسين</strong></td><td><strong>إنهانسمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="173" onclick="window.SaveSystem.save('b1', 'vocab', 173)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Enterprise</strong></td><td><strong>مؤسسة</strong></td><td><strong>إنتربرايز</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="174" onclick="window.SaveSystem.save('b1', 'vocab', 174)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Entertainment</strong></td><td><strong>ترفيه</strong></td><td><strong>إنترتينمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="175" onclick="window.SaveSystem.save('b1', 'vocab', 175)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Environment</strong></td><td><strong>بيئة</strong></td><td><strong>إنفايرونمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="176" onclick="window.SaveSystem.save('b1', 'vocab', 176)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Equipment</strong></td><td><strong>معدات</strong></td><td><strong>إكويبمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="177" onclick="window.SaveSystem.save('b1', 'vocab', 177)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Establishment</strong></td><td><strong>تأسيس</strong></td><td><strong>إستابليشمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="178" onclick="window.SaveSystem.save('b1', 'vocab', 178)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Estimation</strong></td><td><strong>تقدير</strong></td><td><strong>إستيميشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="179" onclick="window.SaveSystem.save('b1', 'vocab', 179)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Evaluation</strong></td><td><strong>تقييم</strong></td><td><strong>إيفاليويشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="180" onclick="window.SaveSystem.save('b1', 'vocab', 180)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Event</strong></td><td><strong>حدث</strong></td><td><strong>إيفنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="181" onclick="window.SaveSystem.save('b1', 'vocab', 181)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Evidence</strong></td><td><strong>دليل</strong></td><td><strong>إيفيدنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="182" onclick="window.SaveSystem.save('b1', 'vocab', 182)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Evolution</strong></td><td><strong>تطور</strong></td><td><strong>إيفولوشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="183" onclick="window.SaveSystem.save('b1', 'vocab', 183)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Exception</strong></td><td><strong>استثناء</strong></td><td><strong>إكسيبشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="184" onclick="window.SaveSystem.save('b1', 'vocab', 184)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Exchange</strong></td><td><strong>تبادل</strong></td><td><strong>إكستشينج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="185" onclick="window.SaveSystem.save('b1', 'vocab', 185)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Execution</strong></td><td><strong>تنفيذ</strong></td><td><strong>إكزيكيوشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="186" onclick="window.SaveSystem.save('b1', 'vocab', 186)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Exercise</strong></td><td><strong>تمرين</strong></td><td><strong>إكسرسايز</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="187" onclick="window.SaveSystem.save('b1', 'vocab', 187)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Exhibition</strong></td><td><strong>معرض</strong></td><td><strong>إكزيبيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="188" onclick="window.SaveSystem.save('b1', 'vocab', 188)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Existence</strong></td><td><strong>وجود</strong></td><td><strong>إكزيستنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="189" onclick="window.SaveSystem.save('b1', 'vocab', 189)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Expansion</strong></td><td><strong>توسع</strong></td><td><strong>إكسبانشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="190" onclick="window.SaveSystem.save('b1', 'vocab', 190)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Expectation</strong></td><td><strong>توقع</strong></td><td><strong>إكسبيكتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="191" onclick="window.SaveSystem.save('b1', 'vocab', 191)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Experience</strong></td><td><strong>خبرة</strong></td><td><strong>إكسبيرينس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="192" onclick="window.SaveSystem.save('b1', 'vocab', 192)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Experiment</strong></td><td><strong>تجربة</strong></td><td><strong>إكسبيرمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="193" onclick="window.SaveSystem.save('b1', 'vocab', 193)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Expert</strong></td><td><strong>خبير</strong></td><td><strong>إكسبرت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="194" onclick="window.SaveSystem.save('b1', 'vocab', 194)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Explanation</strong></td><td><strong>شرح</strong></td><td><strong>إكسبلانيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="195" onclick="window.SaveSystem.save('b1', 'vocab', 195)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Exploration</strong></td><td><strong>استكشاف</strong></td><td><strong>إكسبلوريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="196" onclick="window.SaveSystem.save('b1', 'vocab', 196)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Export</strong></td><td><strong>تصدير</strong></td><td><strong>إكسبورت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="197" onclick="window.SaveSystem.save('b1', 'vocab', 197)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Expression</strong></td><td><strong>تعبير</strong></td><td><strong>إكسبريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="198" onclick="window.SaveSystem.save('b1', 'vocab', 198)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Extension</strong></td><td><strong>تمديد</strong></td><td><strong>إكستينشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="199" onclick="window.SaveSystem.save('b1', 'vocab', 199)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>External</strong></td><td><strong>خارجي</strong></td><td><strong>إكسترنال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="200" onclick="window.SaveSystem.save('b1', 'vocab', 200)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Facility</strong></td><td><strong>مرفق</strong></td><td><strong>فاسيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="201" onclick="window.SaveSystem.save('b1', 'vocab', 201)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Factor</strong></td><td><strong>عامل</strong></td><td><strong>فاكتور</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="202" onclick="window.SaveSystem.save('b1', 'vocab', 202)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Failure</strong></td><td><strong>فشل</strong></td><td><strong>فيليور</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="203" onclick="window.SaveSystem.save('b1', 'vocab', 203)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Feature</strong></td><td><strong>ميزة</strong></td><td><strong>فيتشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="204" onclick="window.SaveSystem.save('b1', 'vocab', 204)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Feedback</strong></td><td><strong>تعليقات</strong></td><td><strong>فيدباك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="205" onclick="window.SaveSystem.save('b1', 'vocab', 205)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Finance</strong></td><td><strong>مالية</strong></td><td><strong>فاينانس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="206" onclick="window.SaveSystem.save('b1', 'vocab', 206)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Flexibility</strong></td><td><strong>مرونة</strong></td><td><strong>فليكسيبيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="207" onclick="window.SaveSystem.save('b1', 'vocab', 207)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Focus</strong></td><td><strong>تركيز</strong></td><td><strong>فوكس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="208" onclick="window.SaveSystem.save('b1', 'vocab', 208)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Format</strong></td><td><strong>تنسيق</strong></td><td><strong>فورمات</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="209" onclick="window.SaveSystem.save('b1', 'vocab', 209)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Formula</strong></td><td><strong>صيغة</strong></td><td><strong>فورميولا</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="210" onclick="window.SaveSystem.save('b1', 'vocab', 210)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Foundation</strong></td><td><strong>أساس</strong></td><td><strong>فاونديشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="211" onclick="window.SaveSystem.save('b1', 'vocab', 211)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Framework</strong></td><td><strong>إطار عمل</strong></td><td><strong>فريم وورك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="212" onclick="window.SaveSystem.save('b1', 'vocab', 212)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Frequency</strong></td><td><strong>تكرار</strong></td><td><strong>فريكوينسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="213" onclick="window.SaveSystem.save('b1', 'vocab', 213)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Function</strong></td><td><strong>وظيفة</strong></td><td><strong>فانكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="214" onclick="window.SaveSystem.save('b1', 'vocab', 214)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Generation</strong></td><td><strong>جيل</strong></td><td><strong>جينيريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="215" onclick="window.SaveSystem.save('b1', 'vocab', 215)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Goal</strong></td><td><strong>هدف</strong></td><td><strong>غول</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="216" onclick="window.SaveSystem.save('b1', 'vocab', 216)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Government</strong></td><td><strong>حكومة</strong></td><td><strong>غفرنمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="217" onclick="window.SaveSystem.save('b1', 'vocab', 217)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Growth</strong></td><td><strong>نمو</strong></td><td><strong>غروث</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="218" onclick="window.SaveSystem.save('b1', 'vocab', 218)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Guarantee</strong></td><td><strong>ضمان</strong></td><td><strong>غارنتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="219" onclick="window.SaveSystem.save('b1', 'vocab', 219)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Guidance</strong></td><td><strong>إرشاد</strong></td><td><strong>غايدنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="220" onclick="window.SaveSystem.save('b1', 'vocab', 220)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Hardware</strong></td><td><strong>أجهزة</strong></td><td><strong>هاردوير</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="221" onclick="window.SaveSystem.save('b1', 'vocab', 221)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Hierarchy</strong></td><td><strong>تسلسل هرمي</strong></td><td><strong>هايراركي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="222" onclick="window.SaveSystem.save('b1', 'vocab', 222)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>History</strong></td><td><strong>تاريخ</strong></td><td><strong>هيستوري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="223" onclick="window.SaveSystem.save('b1', 'vocab', 223)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Hypothesis</strong></td><td><strong>فرضية</strong></td><td><strong>هايبوثيسيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="224" onclick="window.SaveSystem.save('b1', 'vocab', 224)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Identification</strong></td><td><strong>تحديد</strong></td><td><strong>آيدنتيفيكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="225" onclick="window.SaveSystem.save('b1', 'vocab', 225)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Identity</strong></td><td><strong>هوية</strong></td><td><strong>آيدنتيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="226" onclick="window.SaveSystem.save('b1', 'vocab', 226)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Image</strong></td><td><strong>صورة</strong></td><td><strong>إيميج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="227" onclick="window.SaveSystem.save('b1', 'vocab', 227)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Impact</strong></td><td><strong>تأثير</strong></td><td><strong>إمباكت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="228" onclick="window.SaveSystem.save('b1', 'vocab', 228)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Implementation</strong></td><td><strong>تنفيذ</strong></td><td><strong>إمبليمنتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="229" onclick="window.SaveSystem.save('b1', 'vocab', 229)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Implication</strong></td><td><strong>تضمين</strong></td><td><strong>إمبليكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="230" onclick="window.SaveSystem.save('b1', 'vocab', 230)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Import</strong></td><td><strong>استيراد</strong></td><td><strong>إمبورت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="231" onclick="window.SaveSystem.save('b1', 'vocab', 231)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Improvement</strong></td><td><strong>تحسين</strong></td><td><strong>إمبروفمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="232" onclick="window.SaveSystem.save('b1', 'vocab', 232)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Incentive</strong></td><td><strong>حافز</strong></td><td><strong>إنسنتيف</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="233" onclick="window.SaveSystem.save('b1', 'vocab', 233)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Income</strong></td><td><strong>دخل</strong></td><td><strong>إنكام</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="234" onclick="window.SaveSystem.save('b1', 'vocab', 234)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Independence</strong></td><td><strong>استقلالية</strong></td><td><strong>إنديبيندنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="235" onclick="window.SaveSystem.save('b1', 'vocab', 235)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Index</strong></td><td><strong>فهرس</strong></td><td><strong>إندكس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="236" onclick="window.SaveSystem.save('b1', 'vocab', 236)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Industry</strong></td><td><strong>صناعة</strong></td><td><strong>إندستري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="237" onclick="window.SaveSystem.save('b1', 'vocab', 237)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Information</strong></td><td><strong>معلومات</strong></td><td><strong>إنفورميشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="238" onclick="window.SaveSystem.save('b1', 'vocab', 238)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Infrastructure</strong></td><td><strong>بنية تحتية</strong></td><td><strong>إنفراستراكتشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="239" onclick="window.SaveSystem.save('b1', 'vocab', 239)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Initiative</strong></td><td><strong>مبادرة</strong></td><td><strong>إنيشيتيف</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="240" onclick="window.SaveSystem.save('b1', 'vocab', 240)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Innovation</strong></td><td><strong>ابتكار</strong></td><td><strong>إنوفيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="241" onclick="window.SaveSystem.save('b1', 'vocab', 241)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Input</strong></td><td><strong>مدخل</strong></td><td><strong>إنبوت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="242" onclick="window.SaveSystem.save('b1', 'vocab', 242)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Inspection</strong></td><td><strong>تفتيش</strong></td><td><strong>إنسبيكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="243" onclick="window.SaveSystem.save('b1', 'vocab', 243)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Installation</strong></td><td><strong>تثبيت</strong></td><td><strong>إنستاليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="244" onclick="window.SaveSystem.save('b1', 'vocab', 244)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Instance</strong></td><td><strong>مثال</strong></td><td><strong>إنستنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="245" onclick="window.SaveSystem.save('b1', 'vocab', 245)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Institution</strong></td><td><strong>مؤسسة</strong></td><td><strong>إنستيتيوشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="246" onclick="window.SaveSystem.save('b1', 'vocab', 246)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Instruction</strong></td><td><strong>تعليمات</strong></td><td><strong>إنستراكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="247" onclick="window.SaveSystem.save('b1', 'vocab', 247)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Integration</strong></td><td><strong>تكامل</strong></td><td><strong>إنتيغريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="248" onclick="window.SaveSystem.save('b1', 'vocab', 248)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Intelligence</strong></td><td><strong>ذكاء</strong></td><td><strong>إنتيليجنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="249" onclick="window.SaveSystem.save('b1', 'vocab', 249)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Intention</strong></td><td><strong>نية</strong></td><td><strong>إنتينشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="250" onclick="window.SaveSystem.save('b1', 'vocab', 250)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Interaction</strong></td><td><strong>تفاعل</strong></td><td><strong>إنتراكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="251" onclick="window.SaveSystem.save('b1', 'vocab', 251)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Interest</strong></td><td><strong>اهتمام</strong></td><td><strong>إنترست</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="252" onclick="window.SaveSystem.save('b1', 'vocab', 252)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Interface</strong></td><td><strong>واجهة</strong></td><td><strong>إنترفيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="253" onclick="window.SaveSystem.save('b1', 'vocab', 253)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Internal</strong></td><td><strong>داخلي</strong></td><td><strong>إنترنال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="254" onclick="window.SaveSystem.save('b1', 'vocab', 254)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>International</strong></td><td><strong>دولي</strong></td><td><strong>إنترناشونال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="255" onclick="window.SaveSystem.save('b1', 'vocab', 255)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Internet</strong></td><td><strong>إنترنت</strong></td><td><strong>إنترنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="256" onclick="window.SaveSystem.save('b1', 'vocab', 256)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Interpretation</strong></td><td><strong>تفسير</strong></td><td><strong>إنتربريتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="257" onclick="window.SaveSystem.save('b1', 'vocab', 257)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Interview</strong></td><td><strong>مقابلة</strong></td><td><strong>إنترفيو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="258" onclick="window.SaveSystem.save('b1', 'vocab', 258)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Introduction</strong></td><td><strong>مقدمة</strong></td><td><strong>إنترودكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="259" onclick="window.SaveSystem.save('b1', 'vocab', 259)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Investigation</strong></td><td><strong>تحقيق</strong></td><td><strong>إنفيستيغيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="260" onclick="window.SaveSystem.save('b1', 'vocab', 260)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Investment</strong></td><td><strong>استثمار</strong></td><td><strong>إنفيستمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="261" onclick="window.SaveSystem.save('b1', 'vocab', 261)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Invoice</strong></td><td><strong>فاتورة</strong></td><td><strong>إنفويس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="262" onclick="window.SaveSystem.save('b1', 'vocab', 262)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Issue</strong></td><td><strong>مسألة</strong></td><td><strong>إيشو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="263" onclick="window.SaveSystem.save('b1', 'vocab', 263)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Item</strong></td><td><strong>عنصر</strong></td><td><strong>آيتم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="264" onclick="window.SaveSystem.save('b1', 'vocab', 264)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Journal</strong></td><td><strong>مجلة</strong></td><td><strong>جورنال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="265" onclick="window.SaveSystem.save('b1', 'vocab', 265)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Judgment</strong></td><td><strong>حكم</strong></td><td><strong>جادجمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="266" onclick="window.SaveSystem.save('b1', 'vocab', 266)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Justice</strong></td><td><strong>عدالة</strong></td><td><strong>جاستيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="267" onclick="window.SaveSystem.save('b1', 'vocab', 267)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Knowledge</strong></td><td><strong>معرفة</strong></td><td><strong>نولدج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="268" onclick="window.SaveSystem.save('b1', 'vocab', 268)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Laboratory</strong></td><td><strong>مختبر</strong></td><td><strong>لابوراتوري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="269" onclick="window.SaveSystem.save('b1', 'vocab', 269)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Language</strong></td><td><strong>لغة</strong></td><td><strong>لانغويج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="270" onclick="window.SaveSystem.save('b1', 'vocab', 270)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Launch</strong></td><td><strong>إطلاق</strong></td><td><strong>لونش</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="271" onclick="window.SaveSystem.save('b1', 'vocab', 271)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Leadership</strong></td><td><strong>قيادة</strong></td><td><strong>ليدرشيب</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="272" onclick="window.SaveSystem.save('b1', 'vocab', 272)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Learning</strong></td><td><strong>تعلم</strong></td><td><strong>لرنينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="273" onclick="window.SaveSystem.save('b1', 'vocab', 273)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Legislation</strong></td><td><strong>تشريع</strong></td><td><strong>ليجيسليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="274" onclick="window.SaveSystem.save('b1', 'vocab', 274)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Length</strong></td><td><strong>طول</strong></td><td><strong>لينغث</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="275" onclick="window.SaveSystem.save('b1', 'vocab', 275)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Level</strong></td><td><strong>مستوى</strong></td><td><strong>ليفل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="276" onclick="window.SaveSystem.save('b1', 'vocab', 276)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Library</strong></td><td><strong>مكتبة</strong></td><td><strong>لايبريري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="277" onclick="window.SaveSystem.save('b1', 'vocab', 277)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>License</strong></td><td><strong>رخصة</strong></td><td><strong>لايسنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="278" onclick="window.SaveSystem.save('b1', 'vocab', 278)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Limitation</strong></td><td><strong>قيد</strong></td><td><strong>ليميتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="279" onclick="window.SaveSystem.save('b1', 'vocab', 279)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Literature</strong></td><td><strong>أدب</strong></td><td><strong>ليتريتشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="280" onclick="window.SaveSystem.save('b1', 'vocab', 280)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Location</strong></td><td><strong>موقع</strong></td><td><strong>لوكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="281" onclick="window.SaveSystem.save('b1', 'vocab', 281)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Logic</strong></td><td><strong>منطق</strong></td><td><strong>لوجيك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="282" onclick="window.SaveSystem.save('b1', 'vocab', 282)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Machinery</strong></td><td><strong>آلات</strong></td><td><strong>ماشينري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="283" onclick="window.SaveSystem.save('b1', 'vocab', 283)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Magazine</strong></td><td><strong>مجلة</strong></td><td><strong>ماغازين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="284" onclick="window.SaveSystem.save('b1', 'vocab', 284)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Maintenance</strong></td><td><strong>صيانة</strong></td><td><strong>مينتيننس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="285" onclick="window.SaveSystem.save('b1', 'vocab', 285)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Management</strong></td><td><strong>إدارة</strong></td><td><strong>مانجمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="286" onclick="window.SaveSystem.save('b1', 'vocab', 286)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Manager</strong></td><td><strong>مدير</strong></td><td><strong>مانجر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="287" onclick="window.SaveSystem.save('b1', 'vocab', 287)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Manufacturing</strong></td><td><strong>تصنيع</strong></td><td><strong>مانيوفاكتشرينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="288" onclick="window.SaveSystem.save('b1', 'vocab', 288)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Market</strong></td><td><strong>سوق</strong></td><td><strong>ماركت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="289" onclick="window.SaveSystem.save('b1', 'vocab', 289)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Marketing</strong></td><td><strong>تسويق</strong></td><td><strong>ماركتينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="290" onclick="window.SaveSystem.save('b1', 'vocab', 290)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Material</strong></td><td><strong>مادة</strong></td><td><strong>ماتيريال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="291" onclick="window.SaveSystem.save('b1', 'vocab', 291)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Mathematics</strong></td><td><strong>رياضيات</strong></td><td><strong>ماثيماتيكس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="292" onclick="window.SaveSystem.save('b1', 'vocab', 292)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Matrix</strong></td><td><strong>مصفوفة</strong></td><td><strong>ماتريكس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="293" onclick="window.SaveSystem.save('b1', 'vocab', 293)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Maximum</strong></td><td><strong>أقصى</strong></td><td><strong>ماكسيمم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="294" onclick="window.SaveSystem.save('b1', 'vocab', 294)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Measurement</strong></td><td><strong>قياس</strong></td><td><strong>ميجرمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="295" onclick="window.SaveSystem.save('b1', 'vocab', 295)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Mechanism</strong></td><td><strong>آلية</strong></td><td><strong>ميكانيزم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="296" onclick="window.SaveSystem.save('b1', 'vocab', 296)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Media</strong></td><td><strong>وسائل الإعلام</strong></td><td><strong>ميديا</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="297" onclick="window.SaveSystem.save('b1', 'vocab', 297)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Medicine</strong></td><td><strong>طب</strong></td><td><strong>ميديسين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="298" onclick="window.SaveSystem.save('b1', 'vocab', 298)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Meeting</strong></td><td><strong>اجتماع</strong></td><td><strong>ميتينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="299" onclick="window.SaveSystem.save('b1', 'vocab', 299)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Member</strong></td><td><strong>عضو</strong></td><td><strong>ميمبر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="300" onclick="window.SaveSystem.save('b1', 'vocab', 300)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Memory</strong></td><td><strong>ذاكرة</strong></td><td><strong>ميموري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="301" onclick="window.SaveSystem.save('b1', 'vocab', 301)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Message</strong></td><td><strong>رسالة</strong></td><td><strong>ميسيج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="302" onclick="window.SaveSystem.save('b1', 'vocab', 302)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Method</strong></td><td><strong>طريقة</strong></td><td><strong>ميثود</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="303" onclick="window.SaveSystem.save('b1', 'vocab', 303)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Methodology</strong></td><td><strong>منهجية</strong></td><td><strong>ميثودولوجي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="304" onclick="window.SaveSystem.save('b1', 'vocab', 304)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Minimum</strong></td><td><strong>أدنى</strong></td><td><strong>مينيمم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="305" onclick="window.SaveSystem.save('b1', 'vocab', 305)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Mission</strong></td><td><strong>مهمة</strong></td><td><strong>ميشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="306" onclick="window.SaveSystem.save('b1', 'vocab', 306)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Model</strong></td><td><strong>نموذج</strong></td><td><strong>مودل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="307" onclick="window.SaveSystem.save('b1', 'vocab', 307)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Modification</strong></td><td><strong>تعديل</strong></td><td><strong>موديفيكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="308" onclick="window.SaveSystem.save('b1', 'vocab', 308)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Module</strong></td><td><strong>وحدة</strong></td><td><strong>موديول</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="309" onclick="window.SaveSystem.save('b1', 'vocab', 309)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Monitor</strong></td><td><strong>مراقب</strong></td><td><strong>مونيتور</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="310" onclick="window.SaveSystem.save('b1', 'vocab', 310)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Motivation</strong></td><td><strong>دافع</strong></td><td><strong>موتيفيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="311" onclick="window.SaveSystem.save('b1', 'vocab', 311)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Movement</strong></td><td><strong>حركة</strong></td><td><strong>موفمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="312" onclick="window.SaveSystem.save('b1', 'vocab', 312)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Multimedia</strong></td><td><strong>وسائط متعددة</strong></td><td><strong>مالتيميديا</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="313" onclick="window.SaveSystem.save('b1', 'vocab', 313)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Multiple</strong></td><td><strong>متعدد</strong></td><td><strong>مالتيبل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="314" onclick="window.SaveSystem.save('b1', 'vocab', 314)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Music</strong></td><td><strong>موسيقى</strong></td><td><strong>ميوزيك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="315" onclick="window.SaveSystem.save('b1', 'vocab', 315)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>National</strong></td><td><strong>وطني</strong></td><td><strong>ناشونال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="316" onclick="window.SaveSystem.save('b1', 'vocab', 316)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Nature</strong></td><td><strong>طبيعة</strong></td><td><strong>نيتشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="317" onclick="window.SaveSystem.save('b1', 'vocab', 317)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Navigation</strong></td><td><strong>تنقل</strong></td><td><strong>نافيغيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="318" onclick="window.SaveSystem.save('b1', 'vocab', 318)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Necessity</strong></td><td><strong>ضرورة</strong></td><td><strong>نيسيسيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="319" onclick="window.SaveSystem.save('b1', 'vocab', 319)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Negotiation</strong></td><td><strong>تفاوض</strong></td><td><strong>نيغوسييشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="320" onclick="window.SaveSystem.save('b1', 'vocab', 320)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Network</strong></td><td><strong>شبكة</strong></td><td><strong>نتوورك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="321" onclick="window.SaveSystem.save('b1', 'vocab', 321)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Newsletter</strong></td><td><strong>نشرة إخبارية</strong></td><td><strong>نيوزليتر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="322" onclick="window.SaveSystem.save('b1', 'vocab', 322)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Newspaper</strong></td><td><strong>صحيفة</strong></td><td><strong>نيوزبيبر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="323" onclick="window.SaveSystem.save('b1', 'vocab', 323)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Nomination</strong></td><td><strong>ترشيح</strong></td><td><strong>نومينيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="324" onclick="window.SaveSystem.save('b1', 'vocab', 324)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Notification</strong></td><td><strong>إشعار</strong></td><td><strong>نوتيفيكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="325" onclick="window.SaveSystem.save('b1', 'vocab', 325)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Number</strong></td><td><strong>رقم</strong></td><td><strong>نمبر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="326" onclick="window.SaveSystem.save('b1', 'vocab', 326)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Objective</strong></td><td><strong>هدف</strong></td><td><strong>أوبجيكتيف</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="327" onclick="window.SaveSystem.save('b1', 'vocab', 327)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Obligation</strong></td><td><strong>التزام</strong></td><td><strong>أوبليغيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="328" onclick="window.SaveSystem.save('b1', 'vocab', 328)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Observation</strong></td><td><strong>ملاحظة</strong></td><td><strong>أوبزرفيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="329" onclick="window.SaveSystem.save('b1', 'vocab', 329)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Obstacle</strong></td><td><strong>عقبة</strong></td><td><strong>أوبستيكل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="330" onclick="window.SaveSystem.save('b1', 'vocab', 330)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Occupation</strong></td><td><strong>مهنة</strong></td><td><strong>أوكيوبيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="331" onclick="window.SaveSystem.save('b1', 'vocab', 331)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Occurrence</strong></td><td><strong>حدوث</strong></td><td><strong>أوكيرنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="332" onclick="window.SaveSystem.save('b1', 'vocab', 332)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Office</strong></td><td><strong>مكتب</strong></td><td><strong>أوفيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="333" onclick="window.SaveSystem.save('b1', 'vocab', 333)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Officer</strong></td><td><strong>ضابط</strong></td><td><strong>أوفيسر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="334" onclick="window.SaveSystem.save('b1', 'vocab', 334)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Operation</strong></td><td><strong>عملية</strong></td><td><strong>أوبريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="335" onclick="window.SaveSystem.save('b1', 'vocab', 335)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Opinion</strong></td><td><strong>رأي</strong></td><td><strong>أوبينيون</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="336" onclick="window.SaveSystem.save('b1', 'vocab', 336)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Opportunity</strong></td><td><strong>فرصة</strong></td><td><strong>أوبورتيونيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="337" onclick="window.SaveSystem.save('b1', 'vocab', 337)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Opposition</strong></td><td><strong>معارضة</strong></td><td><strong>أوبوزيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="338" onclick="window.SaveSystem.save('b1', 'vocab', 338)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Option</strong></td><td><strong>خيار</strong></td><td><strong>أوبشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="339" onclick="window.SaveSystem.save('b1', 'vocab', 339)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Order</strong></td><td><strong>طلب</strong></td><td><strong>أوردر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="340" onclick="window.SaveSystem.save('b1', 'vocab', 340)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Organization</strong></td><td><strong>منظمة</strong></td><td><strong>أورغانايزيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="341" onclick="window.SaveSystem.save('b1', 'vocab', 341)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Orientation</strong></td><td><strong>توجه</strong></td><td><strong>أوريينتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="342" onclick="window.SaveSystem.save('b1', 'vocab', 342)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Origin</strong></td><td><strong>أصل</strong></td><td><strong>أوريجين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="343" onclick="window.SaveSystem.save('b1', 'vocab', 343)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Output</strong></td><td><strong>مخرج</strong></td><td><strong>أوتبوت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="344" onclick="window.SaveSystem.save('b1', 'vocab', 344)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Overview</strong></td><td><strong>نظرة عامة</strong></td><td><strong>أوفرفيو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="345" onclick="window.SaveSystem.save('b1', 'vocab', 345)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Ownership</strong></td><td><strong>ملكية</strong></td><td><strong>أونرشيب</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="346" onclick="window.SaveSystem.save('b1', 'vocab', 346)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Package</strong></td><td><strong>حزمة</strong></td><td><strong>باكيج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="347" onclick="window.SaveSystem.save('b1', 'vocab', 347)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Page</strong></td><td><strong>صفحة</strong></td><td><strong>بيج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="348" onclick="window.SaveSystem.save('b1', 'vocab', 348)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Panel</strong></td><td><strong>لوحة</strong></td><td><strong>بانل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="349" onclick="window.SaveSystem.save('b1', 'vocab', 349)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Paper</strong></td><td><strong>ورقة</strong></td><td><strong>بيبر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="350" onclick="window.SaveSystem.save('b1', 'vocab', 350)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Parameter</strong></td><td><strong>معامل</strong></td><td><strong>باراميتر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="351" onclick="window.SaveSystem.save('b1', 'vocab', 351)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Participation</strong></td><td><strong>مشاركة</strong></td><td><strong>بارتيسيبيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="352" onclick="window.SaveSystem.save('b1', 'vocab', 352)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Partnership</strong></td><td><strong>شراكة</strong></td><td><strong>بارتنرشيب</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="353" onclick="window.SaveSystem.save('b1', 'vocab', 353)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Password</strong></td><td><strong>كلمة مرور</strong></td><td><strong>باسوورد</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="354" onclick="window.SaveSystem.save('b1', 'vocab', 354)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Patent</strong></td><td><strong>براءة اختراع</strong></td><td><strong>باتنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="355" onclick="window.SaveSystem.save('b1', 'vocab', 355)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Path</strong></td><td><strong>مسار</strong></td><td><strong>باث</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="356" onclick="window.SaveSystem.save('b1', 'vocab', 356)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Pattern</strong></td><td><strong>نمط</strong></td><td><strong>باترن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="357" onclick="window.SaveSystem.save('b1', 'vocab', 357)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Payment</strong></td><td><strong>دفع</strong></td><td><strong>بيمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="358" onclick="window.SaveSystem.save('b1', 'vocab', 358)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Penalty</strong></td><td><strong>غرامة</strong></td><td><strong>بينالتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="359" onclick="window.SaveSystem.save('b1', 'vocab', 359)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Percentage</strong></td><td><strong>نسبة مئوية</strong></td><td><strong>بيرسنتيج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="360" onclick="window.SaveSystem.save('b1', 'vocab', 360)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Performance</strong></td><td><strong>أداء</strong></td><td><strong>بيرفورمنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="361" onclick="window.SaveSystem.save('b1', 'vocab', 361)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Period</strong></td><td><strong>فترة</strong></td><td><strong>بيريود</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="362" onclick="window.SaveSystem.save('b1', 'vocab', 362)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Permission</strong></td><td><strong>إذن</strong></td><td><strong>بيرميشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="363" onclick="window.SaveSystem.save('b1', 'vocab', 363)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Person</strong></td><td><strong>شخص</strong></td><td><strong>بيرسن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="364" onclick="window.SaveSystem.save('b1', 'vocab', 364)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Personnel</strong></td><td><strong>موظفون</strong></td><td><strong>بيرسونيل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="365" onclick="window.SaveSystem.save('b1', 'vocab', 365)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Perspective</strong></td><td><strong>منظور</strong></td><td><strong>بيرسبيكتيف</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="366" onclick="window.SaveSystem.save('b1', 'vocab', 366)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Phase</strong></td><td><strong>مرحلة</strong></td><td><strong>فيز</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="367" onclick="window.SaveSystem.save('b1', 'vocab', 367)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Philosophy</strong></td><td><strong>فلسفة</strong></td><td><strong>فيلوسوفي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="368" onclick="window.SaveSystem.save('b1', 'vocab', 368)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Phone</strong></td><td><strong>هاتف</strong></td><td><strong>فون</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="369" onclick="window.SaveSystem.save('b1', 'vocab', 369)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Photo</strong></td><td><strong>صورة</strong></td><td><strong>فوتو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="370" onclick="window.SaveSystem.save('b1', 'vocab', 370)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Physical</strong></td><td><strong>مادي</strong></td><td><strong>فيزيكال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="371" onclick="window.SaveSystem.save('b1', 'vocab', 371)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Picture</strong></td><td><strong>صورة</strong></td><td><strong>بيكتشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="372" onclick="window.SaveSystem.save('b1', 'vocab', 372)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Plan</strong></td><td><strong>خطة</strong></td><td><strong>بلان</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="373" onclick="window.SaveSystem.save('b1', 'vocab', 373)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Platform</strong></td><td><strong>منصة</strong></td><td><strong>بلاتفورم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="374" onclick="window.SaveSystem.save('b1', 'vocab', 374)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Policy</strong></td><td><strong>سياسة</strong></td><td><strong>بوليسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="375" onclick="window.SaveSystem.save('b1', 'vocab', 375)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Politics</strong></td><td><strong>سياسة</strong></td><td><strong>بوليتيكس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="376" onclick="window.SaveSystem.save('b1', 'vocab', 376)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Population</strong></td><td><strong>سكان</strong></td><td><strong>بوبيوليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="377" onclick="window.SaveSystem.save('b1', 'vocab', 377)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Portfolio</strong></td><td><strong>محفظة</strong></td><td><strong>بورتفوليو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="378" onclick="window.SaveSystem.save('b1', 'vocab', 378)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Position</strong></td><td><strong>موقف</strong></td><td><strong>بوزيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="379" onclick="window.SaveSystem.save('b1', 'vocab', 379)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Possibility</strong></td><td><strong>إمكانية</strong></td><td><strong>بوسيبيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="380" onclick="window.SaveSystem.save('b1', 'vocab', 380)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Potential</strong></td><td><strong>إمكانات</strong></td><td><strong>بوتنشل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="381" onclick="window.SaveSystem.save('b1', 'vocab', 381)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Power</strong></td><td><strong>قوة</strong></td><td><strong>باور</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="382" onclick="window.SaveSystem.save('b1', 'vocab', 382)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Practice</strong></td><td><strong>ممارسة</strong></td><td><strong>براكتيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="383" onclick="window.SaveSystem.save('b1', 'vocab', 383)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Preference</strong></td><td><strong>تفضيل</strong></td><td><strong>بريفرنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="384" onclick="window.SaveSystem.save('b1', 'vocab', 384)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Preparation</strong></td><td><strong>إعداد</strong></td><td><strong>بريبريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="385" onclick="window.SaveSystem.save('b1', 'vocab', 385)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Presence</strong></td><td><strong>حضور</strong></td><td><strong>بريزنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="386" onclick="window.SaveSystem.save('b1', 'vocab', 386)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Presentation</strong></td><td><strong>عرض</strong></td><td><strong>بريزنتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="387" onclick="window.SaveSystem.save('b1', 'vocab', 387)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>President</strong></td><td><strong>رئيس</strong></td><td><strong>بريزيدنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="388" onclick="window.SaveSystem.save('b1', 'vocab', 388)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Pressure</strong></td><td><strong>ضغط</strong></td><td><strong>بريشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="389" onclick="window.SaveSystem.save('b1', 'vocab', 389)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Prevention</strong></td><td><strong>منع</strong></td><td><strong>بريفنشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="390" onclick="window.SaveSystem.save('b1', 'vocab', 390)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Price</strong></td><td><strong>سعر</strong></td><td><strong>برايس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="391" onclick="window.SaveSystem.save('b1', 'vocab', 391)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Priority</strong></td><td><strong>أولوية</strong></td><td><strong>برايوريتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="392" onclick="window.SaveSystem.save('b1', 'vocab', 392)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Privacy</strong></td><td><strong>خصوصية</strong></td><td><strong>برايفاسي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="393" onclick="window.SaveSystem.save('b1', 'vocab', 393)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Probability</strong></td><td><strong>احتمال</strong></td><td><strong>بروبابيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="394" onclick="window.SaveSystem.save('b1', 'vocab', 394)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Problem</strong></td><td><strong>مشكلة</strong></td><td><strong>بروبلم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="395" onclick="window.SaveSystem.save('b1', 'vocab', 395)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Procedure</strong></td><td><strong>إجراء</strong></td><td><strong>بروسيديور</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="396" onclick="window.SaveSystem.save('b1', 'vocab', 396)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Process</strong></td><td><strong>عملية</strong></td><td><strong>بروسيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="397" onclick="window.SaveSystem.save('b1', 'vocab', 397)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Processing</strong></td><td><strong>معالجة</strong></td><td><strong>بروسيسينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="398" onclick="window.SaveSystem.save('b1', 'vocab', 398)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Procurement</strong></td><td><strong>شراء</strong></td><td><strong>بروكيورمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="399" onclick="window.SaveSystem.save('b1', 'vocab', 399)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Product</strong></td><td><strong>منتج</strong></td><td><strong>برودكت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="400" onclick="window.SaveSystem.save('b1', 'vocab', 400)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Production</strong></td><td><strong>إنتاج</strong></td><td><strong>برودكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="401" onclick="window.SaveSystem.save('b1', 'vocab', 401)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Productivity</strong></td><td><strong>إنتاجية</strong></td><td><strong>برودكتيفيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="402" onclick="window.SaveSystem.save('b1', 'vocab', 402)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Professional</strong></td><td><strong>مهني</strong></td><td><strong>بروفيشونال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="403" onclick="window.SaveSystem.save('b1', 'vocab', 403)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Profile</strong></td><td><strong>ملف شخصي</strong></td><td><strong>بروفايل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="404" onclick="window.SaveSystem.save('b1', 'vocab', 404)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Profit</strong></td><td><strong>ربح</strong></td><td><strong>بروفيت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="405" onclick="window.SaveSystem.save('b1', 'vocab', 405)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Program</strong></td><td><strong>برنامج</strong></td><td><strong>بروغرام</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="406" onclick="window.SaveSystem.save('b1', 'vocab', 406)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Programming</strong></td><td><strong>برمجة</strong></td><td><strong>بروغرامينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="407" onclick="window.SaveSystem.save('b1', 'vocab', 407)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Progress</strong></td><td><strong>تقدم</strong></td><td><strong>بروغريس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="408" onclick="window.SaveSystem.save('b1', 'vocab', 408)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Project</strong></td><td><strong>مشروع</strong></td><td><strong>بروجيكت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="409" onclick="window.SaveSystem.save('b1', 'vocab', 409)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Promotion</strong></td><td><strong>ترقية</strong></td><td><strong>بروموشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="410" onclick="window.SaveSystem.save('b1', 'vocab', 410)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Property</strong></td><td><strong>خاصية</strong></td><td><strong>بروبرتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="411" onclick="window.SaveSystem.save('b1', 'vocab', 411)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Proposal</strong></td><td><strong>اقتراح</strong></td><td><strong>بروبوزال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="412" onclick="window.SaveSystem.save('b1', 'vocab', 412)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Protection</strong></td><td><strong>حماية</strong></td><td><strong>بروتيكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="413" onclick="window.SaveSystem.save('b1', 'vocab', 413)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Protocol</strong></td><td><strong>بروتوكول</strong></td><td><strong>بروتوكول</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="414" onclick="window.SaveSystem.save('b1', 'vocab', 414)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Provider</strong></td><td><strong>مزود</strong></td><td><strong>بروفايدر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="415" onclick="window.SaveSystem.save('b1', 'vocab', 415)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Psychology</strong></td><td><strong>علم النفس</strong></td><td><strong>سايكولوجي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="416" onclick="window.SaveSystem.save('b1', 'vocab', 416)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Publication</strong></td><td><strong>نشر</strong></td><td><strong>بابليكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="417" onclick="window.SaveSystem.save('b1', 'vocab', 417)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Publicity</strong></td><td><strong>دعاية</strong></td><td><strong>بابليسيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="418" onclick="window.SaveSystem.save('b1', 'vocab', 418)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Purchase</strong></td><td><strong>شراء</strong></td><td><strong>بيرتشيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="419" onclick="window.SaveSystem.save('b1', 'vocab', 419)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Purpose</strong></td><td><strong>غرض</strong></td><td><strong>بيربوس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="420" onclick="window.SaveSystem.save('b1', 'vocab', 420)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Quality</strong></td><td><strong>جودة</strong></td><td><strong>كواليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="421" onclick="window.SaveSystem.save('b1', 'vocab', 421)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Quantity</strong></td><td><strong>كمية</strong></td><td><strong>كوانتيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="422" onclick="window.SaveSystem.save('b1', 'vocab', 422)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Quarter</strong></td><td><strong>ربع</strong></td><td><strong>كوارتر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="423" onclick="window.SaveSystem.save('b1', 'vocab', 423)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Question</strong></td><td><strong>سؤال</strong></td><td><strong>كويستشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="424" onclick="window.SaveSystem.save('b1', 'vocab', 424)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Questionnaire</strong></td><td><strong>استبيان</strong></td><td><strong>كويستشونير</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="425" onclick="window.SaveSystem.save('b1', 'vocab', 425)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Quote</strong></td><td><strong>اقتباس</strong></td><td><strong>كووت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="426" onclick="window.SaveSystem.save('b1', 'vocab', 426)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Range</strong></td><td><strong>نطاق</strong></td><td><strong>رينج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="427" onclick="window.SaveSystem.save('b1', 'vocab', 427)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Rate</strong></td><td><strong>معدل</strong></td><td><strong>ريت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="428" onclick="window.SaveSystem.save('b1', 'vocab', 428)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Rating</strong></td><td><strong>تقييم</strong></td><td><strong>ريتينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="429" onclick="window.SaveSystem.save('b1', 'vocab', 429)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Ratio</strong></td><td><strong>نسبة</strong></td><td><strong>ريشيو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="430" onclick="window.SaveSystem.save('b1', 'vocab', 430)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reaction</strong></td><td><strong>رد فعل</strong></td><td><strong>رياكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="431" onclick="window.SaveSystem.save('b1', 'vocab', 431)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reality</strong></td><td><strong>واقع</strong></td><td><strong>رياليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="432" onclick="window.SaveSystem.save('b1', 'vocab', 432)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reason</strong></td><td><strong>سبب</strong></td><td><strong>ريزن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="433" onclick="window.SaveSystem.save('b1', 'vocab', 433)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Receipt</strong></td><td><strong>إيصال</strong></td><td><strong>ريسيت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="434" onclick="window.SaveSystem.save('b1', 'vocab', 434)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Recognition</strong></td><td><strong>اعتراف</strong></td><td><strong>ريكوغنيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="435" onclick="window.SaveSystem.save('b1', 'vocab', 435)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Recommendation</strong></td><td><strong>توصية</strong></td><td><strong>ريكوميندشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="436" onclick="window.SaveSystem.save('b1', 'vocab', 436)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Record</strong></td><td><strong>سجل</strong></td><td><strong>ريكورد</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="437" onclick="window.SaveSystem.save('b1', 'vocab', 437)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Recovery</strong></td><td><strong>استرداد</strong></td><td><strong>ريكافري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="438" onclick="window.SaveSystem.save('b1', 'vocab', 438)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Recruitment</strong></td><td><strong>توظيف</strong></td><td><strong>ريكرويتمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="439" onclick="window.SaveSystem.save('b1', 'vocab', 439)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reduction</strong></td><td><strong>تقليل</strong></td><td><strong>ريداكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="440" onclick="window.SaveSystem.save('b1', 'vocab', 440)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reference</strong></td><td><strong>مرجع</strong></td><td><strong>ريفرنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="441" onclick="window.SaveSystem.save('b1', 'vocab', 441)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reflection</strong></td><td><strong>انعكاس</strong></td><td><strong>ريفليكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="442" onclick="window.SaveSystem.save('b1', 'vocab', 442)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reform</strong></td><td><strong>إصلاح</strong></td><td><strong>ريفورم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="443" onclick="window.SaveSystem.save('b1', 'vocab', 443)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Region</strong></td><td><strong>منطقة</strong></td><td><strong>ريجن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="444" onclick="window.SaveSystem.save('b1', 'vocab', 444)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Registration</strong></td><td><strong>تسجيل</strong></td><td><strong>ريجيستريشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="445" onclick="window.SaveSystem.save('b1', 'vocab', 445)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Regulation</strong></td><td><strong>لائحة</strong></td><td><strong>ريغيوليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="446" onclick="window.SaveSystem.save('b1', 'vocab', 446)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Relationship</strong></td><td><strong>علاقة</strong></td><td><strong>ريليشنشيب</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="447" onclick="window.SaveSystem.save('b1', 'vocab', 447)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Release</strong></td><td><strong>إطلاق</strong></td><td><strong>ريليس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="448" onclick="window.SaveSystem.save('b1', 'vocab', 448)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reliability</strong></td><td><strong>موثوقية</strong></td><td><strong>ريلايابيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="449" onclick="window.SaveSystem.save('b1', 'vocab', 449)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Religion</strong></td><td><strong>دين</strong></td><td><strong>ريليجن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="450" onclick="window.SaveSystem.save('b1', 'vocab', 450)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Removal</strong></td><td><strong>إزالة</strong></td><td><strong>ريموفال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="451" onclick="window.SaveSystem.save('b1', 'vocab', 451)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Replacement</strong></td><td><strong>استبدال</strong></td><td><strong>ريبليسمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="452" onclick="window.SaveSystem.save('b1', 'vocab', 452)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Report</strong></td><td><strong>تقرير</strong></td><td><strong>ريبورت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="453" onclick="window.SaveSystem.save('b1', 'vocab', 453)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Representation</strong></td><td><strong>تمثيل</strong></td><td><strong>ريبريزنتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="454" onclick="window.SaveSystem.save('b1', 'vocab', 454)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Representative</strong></td><td><strong>ممثل</strong></td><td><strong>ريبريزنتيتيف</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="455" onclick="window.SaveSystem.save('b1', 'vocab', 455)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reputation</strong></td><td><strong>سمعة</strong></td><td><strong>ريبيوتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="456" onclick="window.SaveSystem.save('b1', 'vocab', 456)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Request</strong></td><td><strong>طلب</strong></td><td><strong>ريكويست</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="457" onclick="window.SaveSystem.save('b1', 'vocab', 457)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Requirement</strong></td><td><strong>متطلب</strong></td><td><strong>ريكوايرمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="458" onclick="window.SaveSystem.save('b1', 'vocab', 458)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Research</strong></td><td><strong>بحث</strong></td><td><strong>ريسيرش</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="459" onclick="window.SaveSystem.save('b1', 'vocab', 459)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Reservation</strong></td><td><strong>حجز</strong></td><td><strong>ريزرفيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="460" onclick="window.SaveSystem.save('b1', 'vocab', 460)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Residence</strong></td><td><strong>إقامة</strong></td><td><strong>ريزيدنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="461" onclick="window.SaveSystem.save('b1', 'vocab', 461)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Resolution</strong></td><td><strong>قرار</strong></td><td><strong>ريزولوشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="462" onclick="window.SaveSystem.save('b1', 'vocab', 462)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Resource</strong></td><td><strong>مورد</strong></td><td><strong>ريسورس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="463" onclick="window.SaveSystem.save('b1', 'vocab', 463)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Response</strong></td><td><strong>استجابة</strong></td><td><strong>ريسبونس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="464" onclick="window.SaveSystem.save('b1', 'vocab', 464)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Responsibility</strong></td><td><strong>مسؤولية</strong></td><td><strong>ريسبونسيبيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="465" onclick="window.SaveSystem.save('b1', 'vocab', 465)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Restaurant</strong></td><td><strong>مطعم</strong></td><td><strong>ريستورانت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="466" onclick="window.SaveSystem.save('b1', 'vocab', 466)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Restriction</strong></td><td><strong>قيد</strong></td><td><strong>ريستريكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="467" onclick="window.SaveSystem.save('b1', 'vocab', 467)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Result</strong></td><td><strong>نتيجة</strong></td><td><strong>ريزلت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="468" onclick="window.SaveSystem.save('b1', 'vocab', 468)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Revenue</strong></td><td><strong>إيراد</strong></td><td><strong>ريفينيو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="469" onclick="window.SaveSystem.save('b1', 'vocab', 469)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Review</strong></td><td><strong>مراجعة</strong></td><td><strong>ريفيو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="470" onclick="window.SaveSystem.save('b1', 'vocab', 470)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Revolution</strong></td><td><strong>ثورة</strong></td><td><strong>ريفولوشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="471" onclick="window.SaveSystem.save('b1', 'vocab', 471)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Risk</strong></td><td><strong>مخاطرة</strong></td><td><strong>ريسك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="472" onclick="window.SaveSystem.save('b1', 'vocab', 472)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Role</strong></td><td><strong>دور</strong></td><td><strong>رول</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="473" onclick="window.SaveSystem.save('b1', 'vocab', 473)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Room</strong></td><td><strong>غرفة</strong></td><td><strong>روم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="474" onclick="window.SaveSystem.save('b1', 'vocab', 474)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Route</strong></td><td><strong>طريق</strong></td><td><strong>روت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="475" onclick="window.SaveSystem.save('b1', 'vocab', 475)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Rule</strong></td><td><strong>قاعدة</strong></td><td><strong>رول</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="476" onclick="window.SaveSystem.save('b1', 'vocab', 476)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Safety</strong></td><td><strong>أمان</strong></td><td><strong>سيفتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="477" onclick="window.SaveSystem.save('b1', 'vocab', 477)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Sale</strong></td><td><strong>بيع</strong></td><td><strong>سيل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="478" onclick="window.SaveSystem.save('b1', 'vocab', 478)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Sample</strong></td><td><strong>عينة</strong></td><td><strong>سامبل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="479" onclick="window.SaveSystem.save('b1', 'vocab', 479)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Satisfaction</strong></td><td><strong>رضا</strong></td><td><strong>ساتيسفاكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="480" onclick="window.SaveSystem.save('b1', 'vocab', 480)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Scale</strong></td><td><strong>مقياس</strong></td><td><strong>سكيل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="481" onclick="window.SaveSystem.save('b1', 'vocab', 481)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Schedule</strong></td><td><strong>جدول</strong></td><td><strong>شيديول</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="482" onclick="window.SaveSystem.save('b1', 'vocab', 482)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Science</strong></td><td><strong>علم</strong></td><td><strong>ساينس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="483" onclick="window.SaveSystem.save('b1', 'vocab', 483)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Scope</strong></td><td><strong>نطاق</strong></td><td><strong>سكوب</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="484" onclick="window.SaveSystem.save('b1', 'vocab', 484)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Screen</strong></td><td><strong>شاشة</strong></td><td><strong>سكرين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="485" onclick="window.SaveSystem.save('b1', 'vocab', 485)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Search</strong></td><td><strong>بحث</strong></td><td><strong>سيرش</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="486" onclick="window.SaveSystem.save('b1', 'vocab', 486)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Season</strong></td><td><strong>موسم</strong></td><td><strong>سيزن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="487" onclick="window.SaveSystem.save('b1', 'vocab', 487)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Section</strong></td><td><strong>قسم</strong></td><td><strong>سيكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="488" onclick="window.SaveSystem.save('b1', 'vocab', 488)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Security</strong></td><td><strong>أمن</strong></td><td><strong>سيكيوريتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="489" onclick="window.SaveSystem.save('b1', 'vocab', 489)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Selection</strong></td><td><strong>اختيار</strong></td><td><strong>سيليكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="490" onclick="window.SaveSystem.save('b1', 'vocab', 490)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Seminar</strong></td><td><strong>ندوة</strong></td><td><strong>سيمينار</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="491" onclick="window.SaveSystem.save('b1', 'vocab', 491)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Sequence</strong></td><td><strong>تسلسل</strong></td><td><strong>سيكوينس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="492" onclick="window.SaveSystem.save('b1', 'vocab', 492)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Series</strong></td><td><strong>سلسلة</strong></td><td><strong>سيريز</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="493" onclick="window.SaveSystem.save('b1', 'vocab', 493)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Service</strong></td><td><strong>خدمة</strong></td><td><strong>سيرفيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="494" onclick="window.SaveSystem.save('b1', 'vocab', 494)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Session</strong></td><td><strong>جلسة</strong></td><td><strong>سيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="495" onclick="window.SaveSystem.save('b1', 'vocab', 495)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Setting</strong></td><td><strong>إعداد</strong></td><td><strong>سيتينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="496" onclick="window.SaveSystem.save('b1', 'vocab', 496)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Setup</strong></td><td><strong>تركيب</strong></td><td><strong>سيتاب</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="497" onclick="window.SaveSystem.save('b1', 'vocab', 497)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Share</strong></td><td><strong>مشاركة</strong></td><td><strong>شير</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="498" onclick="window.SaveSystem.save('b1', 'vocab', 498)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Shift</strong></td><td><strong>تحول</strong></td><td><strong>شيفت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="499" onclick="window.SaveSystem.save('b1', 'vocab', 499)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Shipment</strong></td><td><strong>شحنة</strong></td><td><strong>شيبمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="500" onclick="window.SaveSystem.save('b1', 'vocab', 500)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Shopping</strong></td><td><strong>تسوق</strong></td><td><strong>شوبينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="501" onclick="window.SaveSystem.save('b1', 'vocab', 501)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Signature</strong></td><td><strong>توقيع</strong></td><td><strong>سيغنيتشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="502" onclick="window.SaveSystem.save('b1', 'vocab', 502)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Simulation</strong></td><td><strong>محاكاة</strong></td><td><strong>سيميوليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="503" onclick="window.SaveSystem.save('b1', 'vocab', 503)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Site</strong></td><td><strong>موقع</strong></td><td><strong>سايت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="504" onclick="window.SaveSystem.save('b1', 'vocab', 504)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Situation</strong></td><td><strong>وضع</strong></td><td><strong>سيتيويشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="505" onclick="window.SaveSystem.save('b1', 'vocab', 505)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Size</strong></td><td><strong>حجم</strong></td><td><strong>سايز</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="506" onclick="window.SaveSystem.save('b1', 'vocab', 506)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Skill</strong></td><td><strong>مهارة</strong></td><td><strong>سكيل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="507" onclick="window.SaveSystem.save('b1', 'vocab', 507)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Society</strong></td><td><strong>مجتمع</strong></td><td><strong>سوسايتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="508" onclick="window.SaveSystem.save('b1', 'vocab', 508)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Software</strong></td><td><strong>برمجيات</strong></td><td><strong>سوفتوير</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="509" onclick="window.SaveSystem.save('b1', 'vocab', 509)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Solution</strong></td><td><strong>حل</strong></td><td><strong>سولوشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="510" onclick="window.SaveSystem.save('b1', 'vocab', 510)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Source</strong></td><td><strong>مصدر</strong></td><td><strong>سورس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="511" onclick="window.SaveSystem.save('b1', 'vocab', 511)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Space</strong></td><td><strong>مساحة</strong></td><td><strong>سبيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="512" onclick="window.SaveSystem.save('b1', 'vocab', 512)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Specification</strong></td><td><strong>مواصفة</strong></td><td><strong>سبيسيفيكيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="513" onclick="window.SaveSystem.save('b1', 'vocab', 513)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Speed</strong></td><td><strong>سرعة</strong></td><td><strong>سبيد</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="514" onclick="window.SaveSystem.save('b1', 'vocab', 514)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Staff</strong></td><td><strong>موظفون</strong></td><td><strong>ستاف</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="515" onclick="window.SaveSystem.save('b1', 'vocab', 515)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Stage</strong></td><td><strong>مرحلة</strong></td><td><strong>ستيج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="516" onclick="window.SaveSystem.save('b1', 'vocab', 516)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Standard</strong></td><td><strong>معيار</strong></td><td><strong>ستاندرد</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="517" onclick="window.SaveSystem.save('b1', 'vocab', 517)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Statement</strong></td><td><strong>بيان</strong></td><td><strong>ستيتمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="518" onclick="window.SaveSystem.save('b1', 'vocab', 518)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Statistics</strong></td><td><strong>إحصائيات</strong></td><td><strong>ستاتيستيكس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="519" onclick="window.SaveSystem.save('b1', 'vocab', 519)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Status</strong></td><td><strong>حالة</strong></td><td><strong>ستيتس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="520" onclick="window.SaveSystem.save('b1', 'vocab', 520)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Step</strong></td><td><strong>خطوة</strong></td><td><strong>ستيب</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="521" onclick="window.SaveSystem.save('b1', 'vocab', 521)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Storage</strong></td><td><strong>تخزين</strong></td><td><strong>ستوريج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="522" onclick="window.SaveSystem.save('b1', 'vocab', 522)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Strategy</strong></td><td><strong>استراتيجية</strong></td><td><strong>ستراتيجي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="523" onclick="window.SaveSystem.save('b1', 'vocab', 523)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Structure</strong></td><td><strong>هيكل</strong></td><td><strong>ستراكتشر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="524" onclick="window.SaveSystem.save('b1', 'vocab', 524)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Study</strong></td><td><strong>دراسة</strong></td><td><strong>ستادي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="525" onclick="window.SaveSystem.save('b1', 'vocab', 525)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Style</strong></td><td><strong>أسلوب</strong></td><td><strong>ستايل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="526" onclick="window.SaveSystem.save('b1', 'vocab', 526)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Subject</strong></td><td><strong>موضوع</strong></td><td><strong>سابجيكت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="527" onclick="window.SaveSystem.save('b1', 'vocab', 527)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Submission</strong></td><td><strong>تقديم</strong></td><td><strong>سابميشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="528" onclick="window.SaveSystem.save('b1', 'vocab', 528)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Success</strong></td><td><strong>نجاح</strong></td><td><strong>سكسيس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="529" onclick="window.SaveSystem.save('b1', 'vocab', 529)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Summary</strong></td><td><strong>ملخص</strong></td><td><strong>سماري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="530" onclick="window.SaveSystem.save('b1', 'vocab', 530)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Supervision</strong></td><td><strong>إشراف</strong></td><td><strong>سوبرفيجن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="531" onclick="window.SaveSystem.save('b1', 'vocab', 531)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Supply</strong></td><td><strong>توريد</strong></td><td><strong>سبلاي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="532" onclick="window.SaveSystem.save('b1', 'vocab', 532)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Support</strong></td><td><strong>دعم</strong></td><td><strong>سبورت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="533" onclick="window.SaveSystem.save('b1', 'vocab', 533)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Survey</strong></td><td><strong>مسح</strong></td><td><strong>سيرفي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="534" onclick="window.SaveSystem.save('b1', 'vocab', 534)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Sustainability</strong></td><td><strong>استدامة</strong></td><td><strong>سوستينابيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="535" onclick="window.SaveSystem.save('b1', 'vocab', 535)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Symbol</strong></td><td><strong>رمز</strong></td><td><strong>سيمبول</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="536" onclick="window.SaveSystem.save('b1', 'vocab', 536)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Syndrome</strong></td><td><strong>متلازمة</strong></td><td><strong>سيندروم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="537" onclick="window.SaveSystem.save('b1', 'vocab', 537)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>System</strong></td><td><strong>نظام</strong></td><td><strong>سيستم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="538" onclick="window.SaveSystem.save('b1', 'vocab', 538)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Table</strong></td><td><strong>جدول</strong></td><td><strong>تيبل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="539" onclick="window.SaveSystem.save('b1', 'vocab', 539)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Target</strong></td><td><strong>هدف</strong></td><td><strong>تارغت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="540" onclick="window.SaveSystem.save('b1', 'vocab', 540)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Task</strong></td><td><strong>مهمة</strong></td><td><strong>تاسك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="541" onclick="window.SaveSystem.save('b1', 'vocab', 541)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Tax</strong></td><td><strong>ضريبة</strong></td><td><strong>تاكس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="542" onclick="window.SaveSystem.save('b1', 'vocab', 542)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Team</strong></td><td><strong>فريق</strong></td><td><strong>تيم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="543" onclick="window.SaveSystem.save('b1', 'vocab', 543)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Technique</strong></td><td><strong>تقنية</strong></td><td><strong>تكنيك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="544" onclick="window.SaveSystem.save('b1', 'vocab', 544)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Technology</strong></td><td><strong>تكنولوجيا</strong></td><td><strong>تكنولوجي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="545" onclick="window.SaveSystem.save('b1', 'vocab', 545)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Template</strong></td><td><strong>قالب</strong></td><td><strong>تيمبليت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="546" onclick="window.SaveSystem.save('b1', 'vocab', 546)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Term</strong></td><td><strong>مصطلح</strong></td><td><strong>ترم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="547" onclick="window.SaveSystem.save('b1', 'vocab', 547)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Territory</strong></td><td><strong>إقليم</strong></td><td><strong>تيريتوري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="548" onclick="window.SaveSystem.save('b1', 'vocab', 548)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Test</strong></td><td><strong>اختبار</strong></td><td><strong>تست</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="549" onclick="window.SaveSystem.save('b1', 'vocab', 549)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Text</strong></td><td><strong>نص</strong></td><td><strong>تكست</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="550" onclick="window.SaveSystem.save('b1', 'vocab', 550)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Theory</strong></td><td><strong>نظرية</strong></td><td><strong>ثيوري</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="551" onclick="window.SaveSystem.save('b1', 'vocab', 551)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Threshold</strong></td><td><strong>عتبة</strong></td><td><strong>ثريشولد</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="552" onclick="window.SaveSystem.save('b1', 'vocab', 552)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Time</strong></td><td><strong>وقت</strong></td><td><strong>تايم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="553" onclick="window.SaveSystem.save('b1', 'vocab', 553)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Timeline</strong></td><td><strong>جدول زمني</strong></td><td><strong>تايملاين</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="554" onclick="window.SaveSystem.save('b1', 'vocab', 554)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Title</strong></td><td><strong>عنوان</strong></td><td><strong>تايتل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="555" onclick="window.SaveSystem.save('b1', 'vocab', 555)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Tool</strong></td><td><strong>أداة</strong></td><td><strong>تول</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="556" onclick="window.SaveSystem.save('b1', 'vocab', 556)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Topic</strong></td><td><strong>موضوع</strong></td><td><strong>توبيك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="557" onclick="window.SaveSystem.save('b1', 'vocab', 557)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Total</strong></td><td><strong>إجمالي</strong></td><td><strong>توتال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="558" onclick="window.SaveSystem.save('b1', 'vocab', 558)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Trade</strong></td><td><strong>تجارة</strong></td><td><strong>تريد</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="559" onclick="window.SaveSystem.save('b1', 'vocab', 559)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Traffic</strong></td><td><strong>حركة مرور</strong></td><td><strong>ترافيك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="560" onclick="window.SaveSystem.save('b1', 'vocab', 560)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Training</strong></td><td><strong>تدريب</strong></td><td><strong>ترينينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="561" onclick="window.SaveSystem.save('b1', 'vocab', 561)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Transaction</strong></td><td><strong>معاملة</strong></td><td><strong>ترانزاكشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="562" onclick="window.SaveSystem.save('b1', 'vocab', 562)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Transfer</strong></td><td><strong>نقل</strong></td><td><strong>ترانسفر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="563" onclick="window.SaveSystem.save('b1', 'vocab', 563)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Transformation</strong></td><td><strong>تحول</strong></td><td><strong>ترانسفورميشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="564" onclick="window.SaveSystem.save('b1', 'vocab', 564)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Translation</strong></td><td><strong>ترجمة</strong></td><td><strong>ترانسليشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="565" onclick="window.SaveSystem.save('b1', 'vocab', 565)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Transportation</strong></td><td><strong>نقل</strong></td><td><strong>ترانسبورتيشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="566" onclick="window.SaveSystem.save('b1', 'vocab', 566)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Travel</strong></td><td><strong>سفر</strong></td><td><strong>ترافل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="567" onclick="window.SaveSystem.save('b1', 'vocab', 567)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Treatment</strong></td><td><strong>علاج</strong></td><td><strong>تريتمنت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="568" onclick="window.SaveSystem.save('b1', 'vocab', 568)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Trend</strong></td><td><strong>اتجاه</strong></td><td><strong>تريند</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="569" onclick="window.SaveSystem.save('b1', 'vocab', 569)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Trial</strong></td><td><strong>محاكمة</strong></td><td><strong>ترايال</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="570" onclick="window.SaveSystem.save('b1', 'vocab', 570)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Trust</strong></td><td><strong>ثقة</strong></td><td><strong>تراست</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="571" onclick="window.SaveSystem.save('b1', 'vocab', 571)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Truth</strong></td><td><strong>حقيقة</strong></td><td><strong>تروث</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="572" onclick="window.SaveSystem.save('b1', 'vocab', 572)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Type</strong></td><td><strong>نوع</strong></td><td><strong>تايب</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="573" onclick="window.SaveSystem.save('b1', 'vocab', 573)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Understanding</strong></td><td><strong>فهم</strong></td><td><strong>أندرستاندينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="574" onclick="window.SaveSystem.save('b1', 'vocab', 574)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Union</strong></td><td><strong>اتحاد</strong></td><td><strong>يونيون</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="575" onclick="window.SaveSystem.save('b1', 'vocab', 575)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Unit</strong></td><td><strong>وحدة</strong></td><td><strong>يونيت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="576" onclick="window.SaveSystem.save('b1', 'vocab', 576)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>University</strong></td><td><strong>جامعة</strong></td><td><strong>يونيفرسيتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="577" onclick="window.SaveSystem.save('b1', 'vocab', 577)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Update</strong></td><td><strong>تحديث</strong></td><td><strong>أبديت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="578" onclick="window.SaveSystem.save('b1', 'vocab', 578)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Upgrade</strong></td><td><strong>ترقية</strong></td><td><strong>أبغريد</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="579" onclick="window.SaveSystem.save('b1', 'vocab', 579)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Usage</strong></td><td><strong>استخدام</strong></td><td><strong>يوزيج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="580" onclick="window.SaveSystem.save('b1', 'vocab', 580)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>User</strong></td><td><strong>مستخدم</strong></td><td><strong>يوزر</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="581" onclick="window.SaveSystem.save('b1', 'vocab', 581)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Utility</strong></td><td><strong>مرفق</strong></td><td><strong>يوتيليتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="582" onclick="window.SaveSystem.save('b1', 'vocab', 582)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Validation</strong></td><td><strong>تحقق</strong></td><td><strong>فاليديشن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="583" onclick="window.SaveSystem.save('b1', 'vocab', 583)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Value</strong></td><td><strong>قيمة</strong></td><td><strong>فاليو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="584" onclick="window.SaveSystem.save('b1', 'vocab', 584)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Variable</strong></td><td><strong>متغير</strong></td><td><strong>فاريابل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="585" onclick="window.SaveSystem.save('b1', 'vocab', 585)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Variety</strong></td><td><strong>تنوع</strong></td><td><strong>فارايتي</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="586" onclick="window.SaveSystem.save('b1', 'vocab', 586)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Vehicle</strong></td><td><strong>مركبة</strong></td><td><strong>فيهيكل</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="587" onclick="window.SaveSystem.save('b1', 'vocab', 587)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Vendor</strong></td><td><strong>بائع</strong></td><td><strong>فيندور</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="588" onclick="window.SaveSystem.save('b1', 'vocab', 588)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Version</strong></td><td><strong>إصدار</strong></td><td><strong>فرجن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="589" onclick="window.SaveSystem.save('b1', 'vocab', 589)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Video</strong></td><td><strong>فيديو</strong></td><td><strong>فيديو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="590" onclick="window.SaveSystem.save('b1', 'vocab', 590)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>View</strong></td><td><strong>عرض</strong></td><td><strong>فيو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="591" onclick="window.SaveSystem.save('b1', 'vocab', 591)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Vision</strong></td><td><strong>رؤية</strong></td><td><strong>فيجن</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="592" onclick="window.SaveSystem.save('b1', 'vocab', 592)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Visit</strong></td><td><strong>زيارة</strong></td><td><strong>فيزيت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="593" onclick="window.SaveSystem.save('b1', 'vocab', 593)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Volume</strong></td><td><strong>حجم</strong></td><td><strong>فوليوم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="594" onclick="window.SaveSystem.save('b1', 'vocab', 594)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Vote</strong></td><td><strong>تصويت</strong></td><td><strong>فوت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="595" onclick="window.SaveSystem.save('b1', 'vocab', 595)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Wage</strong></td><td><strong>أجر</strong></td><td><strong>ويج</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="596" onclick="window.SaveSystem.save('b1', 'vocab', 596)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Warning</strong></td><td><strong>تحذير</strong></td><td><strong>وارنينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="597" onclick="window.SaveSystem.save('b1', 'vocab', 597)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Waste</strong></td><td><strong>نفايات</strong></td><td><strong>ويست</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="598" onclick="window.SaveSystem.save('b1', 'vocab', 598)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Website</strong></td><td><strong>موقع ويب</strong></td><td><strong>ويبسايت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="599" onclick="window.SaveSystem.save('b1', 'vocab', 599)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Weight</strong></td><td><strong>وزن</strong></td><td><strong>ويت</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="600" onclick="window.SaveSystem.save('b1', 'vocab', 600)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Welfare</strong></td><td><strong>رفاهية</strong></td><td><strong>ويلفير</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="601" onclick="window.SaveSystem.save('b1', 'vocab', 601)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Width</strong></td><td><strong>عرض</strong></td><td><strong>ويدث</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="602" onclick="window.SaveSystem.save('b1', 'vocab', 602)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Window</strong></td><td><strong>نافذة</strong></td><td><strong>ويندو</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="603" onclick="window.SaveSystem.save('b1', 'vocab', 603)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Wisdom</strong></td><td><strong>حكمة</strong></td><td><strong>ويزدوم</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="604" onclick="window.SaveSystem.save('b1', 'vocab', 604)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Witness</strong></td><td><strong>شاهد</strong></td><td><strong>ويتنس</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="605" onclick="window.SaveSystem.save('b1', 'vocab', 605)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Work</strong></td><td><strong>عمل</strong></td><td><strong>وورك</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="606" onclick="window.SaveSystem.save('b1', 'vocab', 606)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Workshop</strong></td><td><strong>ورشة عمل</strong></td><td><strong>وورك شوب</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="607" onclick="window.SaveSystem.save('b1', 'vocab', 607)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>World</strong></td><td><strong>عالم</strong></td><td><strong>وورلد</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="608" onclick="window.SaveSystem.save('b1', 'vocab', 608)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Writing</strong></td><td><strong>كتابة</strong></td><td><strong>رايتينغ</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="609" onclick="window.SaveSystem.save('b1', 'vocab', 609)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Year</strong></td><td><strong>سنة</strong></td><td><strong>يير</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="610" onclick="window.SaveSystem.save('b1', 'vocab', 610)">⭕ حفظ</button></td></tr>
+                <tr><td><strong>Zone</strong></td><td><strong>منطقة</strong></td><td><strong>زون</strong></td><td><button class="save-btn" data-level="b1" data-type="vocab" data-index="611" onclick="window.SaveSystem.save('b1', 'vocab', 611)">⭕ حفظ</button></td></tr>
+            </tbody>
+        </table></div>
+    </div>
+    
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Firebase Configuration -->
+    <script src="firebase-config.js"></script>
+    <script src="firebase-main.js"></script>
+<script src="progress-system.js"></script>
+
+    
+    
+    <script src="script.js"></script>
+<script>
+// نظام حفظ بسيط يعمل مباشرة في المتصفح
+(function() {
+    'use strict';
+    
+    // إنشاء كائن عام للنظام
+    window.SaveSystem = {
+        // حفظ عنصر
+        save: function(level, type, index) {
+            try {
+                // قراءة البيانات الحالية
+                let data = JSON.parse(localStorage.getItem('courseProgress') || '{}');
+                
+                // التأكد من وجود المستوى
+                if (!data[level]) {
+                    data[level] = {};
+                }
+                
+                // التأكد من وجود النوع
+                if (!data[level][type]) {
+                    data[level][type] = {};
+                }
+                
+                // تبديل الحالة
+                if (data[level][type][index]) {
+                    delete data[level][type][index];
+                    // إزالة من نظام التكرار المتباعد
+                    if (window.SpacedRepetition) {
+                        window.SpacedRepetition.removeItem(level, type, index);
+                    }
+                } else {
+                    data[level][type][index] = {
+                        saved: true,
+                        date: new Date().toISOString()
+                    };
+                    
+                    // إضافة إلى نظام التكرار المتباعد
+                    if (window.SpacedRepetition) {
+                        // استخراج بيانات الكلمة من الصف
+                        const button = event.target;
+                        const row = button.closest('tr');
+                        const cells = row.querySelectorAll('td');
+                        
+                        if (cells.length >= 3) {
+                            const itemData = {
+                                english: cells[0].textContent.trim(),
+                                arabic: cells[1].textContent.trim(),
+                                pronunciation: cells[2].textContent.trim()
+                            };
+                            
+                            window.SpacedRepetition.addItem(level, type, index, itemData);
+                        }
+                    }
+                }
+                
+                // حفظ البيانات
+                localStorage.setItem('courseProgress', JSON.stringify(data));
+                
+                // تحديث الواجهة
+                this.updateUI(level, type);
+                
+                return true;
+            } catch (e) {
+                console.error('خطأ في الحفظ:', e);
+                alert('حدث خطأ في الحفظ. الرجاء المحاولة مرة أخرى.');
+                return false;
+            }
+        },
+        
+        // التحقق من حالة الحفظ
+        isSaved: function(level, type, index) {
+            try {
+                let data = JSON.parse(localStorage.getItem('courseProgress') || '{}');
+                return !!(data[level] && data[level][type] && data[level][type][index]);
+            } catch (e) {
+                return false;
+            }
+        },
+        
+        // تحديث واجهة المستخدم
+        updateUI: function(level, type) {
+            // تحديث جميع الأزرار في الصفحة
+            let buttons = document.querySelectorAll('.save-btn');
+            buttons.forEach(btn => {
+                let btnLevel = btn.getAttribute('data-level');
+                let btnType = btn.getAttribute('data-type');
+                let btnIndex = btn.getAttribute('data-index');
+                
+                if (btnLevel === level && btnType === type) {
+                    if (this.isSaved(level, type, btnIndex)) {
+                        btn.textContent = '✅ محفوظ';
+                        btn.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+                        btn.parentElement.parentElement.style.background = '#d4edda';
+                    } else {
+                        btn.textContent = '⭕ حفظ';
+                        btn.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+                        btn.parentElement.parentElement.style.background = '';
+                    }
+                }
+            });
+            
+            // تحديث شريط التقدم
+            this.updateProgressBar(level, type);
+        },
+        
+        // تحديث شريط التقدم
+        updateProgressBar: function(level, type) {
+            let buttons = document.querySelectorAll(`.save-btn[data-level="${level}"][data-type="${type}"]`);
+            let total = buttons.length;
+            let saved = 0;
+            
+            buttons.forEach(btn => {
+                let index = btn.getAttribute('data-index');
+                if (this.isSaved(level, type, index)) {
+                    saved++;
+                }
+            });
+            
+            let percentage = total > 0 ? Math.round((saved / total) * 100) : 0;
+            
+            // تحديث شريط التقدم إذا كان موجوداً
+            let progressBar = document.querySelector('.progress-bar');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+                progressBar.textContent = `${saved}/${total} (${percentage}%)`;
+            }
+            
+            // تحديث النص في الأعلى
+            let progressText = document.querySelector('.progress-text');
+            if (progressText) {
+                progressText.textContent = `📊 التقدم في هذه الصفحة: ${saved}/${total} ${percentage}%`;
+            }
+        },
+        
+        // تهيئة الصفحة
+        init: function(level, type) {
+            // تحديث جميع الأزرار عند تحميل الصفحة
+            let buttons = document.querySelectorAll('.save-btn');
+            buttons.forEach(btn => {
+                let btnLevel = btn.getAttribute('data-level');
+                let btnType = btn.getAttribute('data-type');
+                let btnIndex = btn.getAttribute('data-index');
+                
+                if (this.isSaved(btnLevel, btnType, btnIndex)) {
+                    btn.textContent = '✅ محفوظ';
+                    btn.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+                    btn.parentElement.parentElement.style.background = '#d4edda';
+                }
+            });
+            
+            // تحديث شريط التقدم
+            if (level && type) {
+                this.updateProgressBar(level, type);
+            }
+        },
+        
+        // الحصول على الإحصائيات
+        getStats: function() {
+            try {
+                let data = JSON.parse(localStorage.getItem('courseProgress') || '{}');
+                let stats = {
+                    total: 0,
+                    byLevel: {}
+                };
+                
+                for (let level in data) {
+                    stats.byLevel[level] = {
+                        sentences: 0,
+                        vocabulary: 0,
+                        total: 0
+                    };
+                    
+                    if (data[level].sentences) {
+                        stats.byLevel[level].sentences = Object.keys(data[level].sentences).length;
+                    }
+                    
+                    if (data[level].vocabulary) {
+                        stats.byLevel[level].vocabulary = Object.keys(data[level].vocabulary).length;
+                    }
+                    
+                    stats.byLevel[level].total = stats.byLevel[level].sentences + stats.byLevel[level].vocabulary;
+                    stats.total += stats.byLevel[level].total;
+                }
+                
+                return stats;
+            } catch (e) {
+                console.error('خطأ في قراءة الإحصائيات:', e);
+                return { total: 0, byLevel: {} };
+            }
+        }
+    };
+    
+    console.log('✅ نظام الحفظ جاهز!');
+})();
+
+
+</script>
+
+<script>
+(function() {
+    const level = document.body.getAttribute('data-level');
+    const type = document.body.getAttribute('data-type');
+    
+    if (!level || !type) return;
+    
+    // Create fixed progress bar
+    const bar = document.createElement('div');
+    bar.className = 'fixed-progress-bar';
+    bar.innerHTML = `
+        <div class="progress-content">
+            <div class="progress-row">
+                <div class="progress-label">📊 التقدم في الحفظ: <span id="save-count">0</span>/<span id="total-count">0</span> (<span id="save-percent">0</span>%)</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="save-fill"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    `;
+    document.body.insertBefore(bar, document.body.firstChild);
+    
+    // Update save progress
+    function updateSaveProgress() {
+        const total = document.querySelectorAll('tbody tr').length;
+        
+        // قراءة البيانات من نظام SpacedRepetition
+        let saved = 0;
+        if (window.SpacedRepetition) {
+            const allItems = window.SpacedRepetition.getAllItems(level, type);
+            saved = allItems.length;
+        }
+        
+        const percent = total > 0 ? Math.round((saved / total) * 100) : 0;
+        
+        document.getElementById('save-count').textContent = saved;
+        document.getElementById('total-count').textContent = total;
+        document.getElementById('save-percent').textContent = percent;
+        document.getElementById('save-fill').style.width = percent + '%';
+    }
+    
+    
+    
+    // Initialize
+    updateSaveProgress();
+    
+    
+    // Listen for changes
+    
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('save-btn')) {
+            setTimeout(updateSaveProgress, 200);
+        }
+    });
+    
+    // Update periodically
+    setInterval(updateSaveProgress, 1000);
+})();
+</script>
+
+    <script src="click-sound.js"></script>
+</body>
+</html>
+

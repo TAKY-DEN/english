@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>مفردات المستوى C2 - كورس اللغة الإنجليزية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-table-fix.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .vocabulary-container {
+            background: white;
+            margin: 100px auto 50px;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .vocabulary-header {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .vocabulary-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .vocabulary-table th {
+            background: #f8f9fa;
+            padding: 1rem;
+            font-weight: 600;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .vocabulary-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .vocabulary-table tr:hover {
+            background: #f8f9fa;
+        }
+        .back-button {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 1000;
+        }
+    
+
+
+
+
+
+
+
+
+
+.fixed-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    color: white;
+}
+
+.fixed-progress-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.progress-section {
+    margin-bottom: 10px;
+}
+
+.progress-section:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.scroll-fill {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+body {
+    padding-top: 120px !important;
+}
+
+
+/* Fixed Progress Container */
+.fixed-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 12px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    color: white;
+}
+
+.progress-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.progress-row {
+    margin-bottom: 8px;
+}
+
+.progress-row:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.scroll-bar-fill {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+body {
+    padding-top: 100px !important;
+}
+
+
+
+    
+    .vocabulary-table,
+    .sentences-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+    }
+    
+    /* للمفردات - 4 أعمدة */
+    .vocabulary-table th:nth-child(1),
+    .vocabulary-table td:nth-child(1) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(2),
+    .vocabulary-table td:nth-child(2) {
+        width: 30% !important;
+        max-width: 30% !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(4),
+    .vocabulary-table td:nth-child(4) {
+        width: 20% !important;
+        max-width: 20% !important;
+        text-align: center !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 35% !important;
+        max-width: 35% !important;
+    }
+    
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* للجمل - 2 أعمدة */
+    .sentences-table th:nth-child(1),
+    .sentences-table td:nth-child(1) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th:nth-child(2),
+    .sentences-table td:nth-child(2) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th,
+    .sentences-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .vocabulary-table th,
+    .vocabulary-table td,
+    .sentences-table th,
+    .sentences-table td {
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.15rem !important;
+    }
+}
+
+
+/* تحسين الجداول على الموبايل - إصلاح نهائي */
+@media (max-width: 768px) {
+    .vocabulary-container,
+    .sentences-container {
+        margin: 80px 0 20px !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+    }
+    
+    .table-wrapper {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    .vocabulary-table,
+    .sentences-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+    }
+    
+    /* للمفردات - 4 أعمدة */
+    .vocabulary-table th:nth-child(1),
+    .vocabulary-table td:nth-child(1) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(2),
+    .vocabulary-table td:nth-child(2) {
+        width: 30% !important;
+        max-width: 30% !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(4),
+    .vocabulary-table td:nth-child(4) {
+        width: 20% !important;
+        max-width: 20% !important;
+        text-align: center !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 35% !important;
+        max-width: 35% !important;
+    }
+    
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* للجمل - 2 أعمدة */
+    .sentences-table th:nth-child(1),
+    .sentences-table td:nth-child(1) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th:nth-child(2),
+    .sentences-table td:nth-child(2) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th,
+    .sentences-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .vocabulary-table th,
+    .vocabulary-table td,
+    .sentences-table th,
+    .sentences-table td {
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.15rem !important;
+    }
+}
+
+
+    .save-btn {
+        padding: 0.4rem 0.6rem;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .save-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+    
+    .save-btn.saved {
+        background: linear-gradient(45deg, #2ecc71, #27ae60);
+    }
+    
+    @media (max-width: 768px) {
+        .save-btn {
+            padding: 0.3rem 0.4rem;
+            font-size: 0.7rem;
+        }
+    }
+
+</style>
+    <script src="spaced-repetition.js"></script>
+</head>
+<body data-level="c2" data-type="vocab">
+    <a href="index.html" class="back-button">← العودة للرئيسية</a>
+    <!-- شريط التقدم -->
+    <div style="position: fixed; top: 70px; left: 0; right: 0; background: white; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 999;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="progress-text" style="text-align: center; margin-bottom: 10px; font-weight: 600; color: #667eea;">
+                📊 التقدم في هذه الصفحة: 0/0 0%
+            </div>
+            <div style="background: #e0e0e0; height: 25px; border-radius: 15px; overflow: hidden;">
+                <div class="progress-bar" style="width: 0%; height: 100%; background: linear-gradient(45deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; transition: width 0.3s ease;">
+                    0/0 (0%)
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="vocabulary-container">
+        <div class="vocabulary-header">
+            <h1>مفردات المستوى C2</h1>
+            <p>188 كلمة احترافية مع الترجمة العربية وطريقة النطق</p>
+        </div>
+        
+        <div class="table-wrapper"><table class="vocabulary-table">
+            <thead>
+                <tr>
+                    <th>الكلمة الإنجليزية</th>
+                    <th>الترجمة العربية</th>
+                    <th>طريقة النطق</th>
+                    <th>الحفظ</th>
+</tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>ubiquitous</td>
+                <td>منتشر في كل مكان</td>
+                <td>يوبيكويتوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="1">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>paradigm</td>
+                <td>نموذج فكري</td>
+                <td>باراديم</td>
+                <td><button class="save-btn" data-level="c2" data-index="2">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>epistemology</td>
+                <td>نظرية المعرفة</td>
+                <td>إبيستيمولوجي</td>
+                <td><button class="save-btn" data-level="c2" data-index="3">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>juxtaposition</td>
+                <td>تجاور</td>
+                <td>جاكستابوزيشن</td>
+                <td><button class="save-btn" data-level="c2" data-index="4">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>dichotomy</td>
+                <td>ثنائية</td>
+                <td>دايكوتومي</td>
+                <td><button class="save-btn" data-level="c2" data-index="5">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>ambiguous</td>
+                <td>غامض</td>
+                <td>أمبيجيوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="6">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>conundrum</td>
+                <td>لغز معقد</td>
+                <td>كونندرم</td>
+                <td><button class="save-btn" data-level="c2" data-index="7">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>ephemeral</td>
+                <td>زائل</td>
+                <td>إفيميرال</td>
+                <td><button class="save-btn" data-level="c2" data-index="8">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>esoteric</td>
+                <td>باطني</td>
+                <td>إيسوتيريك</td>
+                <td><button class="save-btn" data-level="c2" data-index="9">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>facetious</td>
+                <td>ساخر</td>
+                <td>فاسيشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="10">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>idiosyncrasy</td>
+                <td>خصوصية</td>
+                <td>إديوسينكراسي</td>
+                <td><button class="save-btn" data-level="c2" data-index="11">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>indefatigable</td>
+                <td>دؤوب</td>
+                <td>إنديفاتيجابل</td>
+                <td><button class="save-btn" data-level="c2" data-index="12">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>insidious</td>
+                <td>خبيث</td>
+                <td>إنسيديوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="13">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>juxtapose</td>
+                <td>يضع جنباً إلى جنب</td>
+                <td>جاكستابوز</td>
+                <td><button class="save-btn" data-level="c2" data-index="14">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>loquacious</td>
+                <td>ثرثار</td>
+                <td>لوكويشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="15">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>magnanimous</td>
+                <td>كريم النفس</td>
+                <td>ماجنانيموس</td>
+                <td><button class="save-btn" data-level="c2" data-index="16">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>meticulous</td>
+                <td>دقيق</td>
+                <td>ميتيكيولوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="17">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>obfuscate</td>
+                <td>يُبهم</td>
+                <td>أوبفاسكيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="18">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>ostentatious</td>
+                <td>متفاخر</td>
+                <td>أوستينتيشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="19">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>panacea</td>
+                <td>علاج شامل</td>
+                <td>باناسيا</td>
+                <td><button class="save-btn" data-level="c2" data-index="20">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>paradox</td>
+                <td>مفارقة</td>
+                <td>باراد وكس</td>
+                <td><button class="save-btn" data-level="c2" data-index="21">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>perfunctory</td>
+                <td>روتيني</td>
+                <td>بيرفانكتوري</td>
+                <td><button class="save-btn" data-level="c2" data-index="22">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>perspicacious</td>
+                <td>ثاقب النظر</td>
+                <td>بيرسبيكيشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="23">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>plethora</td>
+                <td>وفرة</td>
+                <td>بليثورا</td>
+                <td><button class="save-btn" data-level="c2" data-index="24">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>pragmatic</td>
+                <td>عملي</td>
+                <td>براجماتيك</td>
+                <td><button class="save-btn" data-level="c2" data-index="25">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>precarious</td>
+                <td>غير مستقر</td>
+                <td>بريكيرياس</td>
+                <td><button class="save-btn" data-level="c2" data-index="26">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>prerogative</td>
+                <td>امتياز</td>
+                <td>بريروجاتيف</td>
+                <td><button class="save-btn" data-level="c2" data-index="27">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>propensity</td>
+                <td>ميل</td>
+                <td>بروبينسيتي</td>
+                <td><button class="save-btn" data-level="c2" data-index="28">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>quintessential</td>
+                <td>جوهري</td>
+                <td>كوينتيسينشال</td>
+                <td><button class="save-btn" data-level="c2" data-index="29">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>recalcitrant</td>
+                <td>عنيد</td>
+                <td>ريكالسيترانت</td>
+                <td><button class="save-btn" data-level="c2" data-index="30">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>reclusive</td>
+                <td>منعزل</td>
+                <td>ريكلوسيف</td>
+                <td><button class="save-btn" data-level="c2" data-index="31">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>redundant</td>
+                <td>زائد عن الحاجة</td>
+                <td>ريداندانت</td>
+                <td><button class="save-btn" data-level="c2" data-index="32">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>reticent</td>
+                <td>متحفظ</td>
+                <td>ريتيسنت</td>
+                <td><button class="save-btn" data-level="c2" data-index="33">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>sagacious</td>
+                <td>حكيم</td>
+                <td>ساجيشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="34">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>serendipity</td>
+                <td>صدفة سعيدة</td>
+                <td>سيرينديبيتي</td>
+                <td><button class="save-btn" data-level="c2" data-index="35">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>spurious</td>
+                <td>زائف</td>
+                <td>سبيورياس</td>
+                <td><button class="save-btn" data-level="c2" data-index="36">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>surreptitious</td>
+                <td>خفي</td>
+                <td>سيريبتيشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="37">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>taciturn</td>
+                <td>قليل الكلام</td>
+                <td>تاسيتيرن</td>
+                <td><button class="save-btn" data-level="c2" data-index="38">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>tenacious</td>
+                <td>عنيد</td>
+                <td>تيناشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="39">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>ubiquity</td>
+                <td>انتشار</td>
+                <td>يوبيكويتي</td>
+                <td><button class="save-btn" data-level="c2" data-index="40">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>vicarious</td>
+                <td>بالنيابة</td>
+                <td>فايكيرياس</td>
+                <td><button class="save-btn" data-level="c2" data-index="41">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>vindicate</td>
+                <td>يبرئ</td>
+                <td>فينديكيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="42">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>voracious</td>
+                <td>نهم</td>
+                <td>فوريشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="43">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>wary</td>
+                <td>حذر</td>
+                <td>ويري</td>
+                <td><button class="save-btn" data-level="c2" data-index="44">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>zealous</td>
+                <td>متحمس</td>
+                <td>زيلوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="45">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>abstruse</td>
+                <td>غامض</td>
+                <td>أبستروس</td>
+                <td><button class="save-btn" data-level="c2" data-index="46">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>acumen</td>
+                <td>فطنة</td>
+                <td>أكيومن</td>
+                <td><button class="save-btn" data-level="c2" data-index="47">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>alacrity</td>
+                <td>سرعة</td>
+                <td>ألاكريتي</td>
+                <td><button class="save-btn" data-level="c2" data-index="48">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>ameliorate</td>
+                <td>يحسّن</td>
+                <td>أميليوريت</td>
+                <td><button class="save-btn" data-level="c2" data-index="49">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>anachronism</td>
+                <td>مفارقة زمنية</td>
+                <td>أناكرونيزم</td>
+                <td><button class="save-btn" data-level="c2" data-index="50">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>antithesis</td>
+                <td>نقيض</td>
+                <td>أنتيثيسيس</td>
+                <td><button class="save-btn" data-level="c2" data-index="51">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>apathy</td>
+                <td>لامبالاة</td>
+                <td>أباثي</td>
+                <td><button class="save-btn" data-level="c2" data-index="52">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>arbitrary</td>
+                <td>تعسفي</td>
+                <td>آربيتراري</td>
+                <td><button class="save-btn" data-level="c2" data-index="53">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>arcane</td>
+                <td>غامض</td>
+                <td>آركين</td>
+                <td><button class="save-btn" data-level="c2" data-index="54">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>arduous</td>
+                <td>شاق</td>
+                <td>آردوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="55">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>ascetic</td>
+                <td>زاهد</td>
+                <td>أسيتيك</td>
+                <td><button class="save-btn" data-level="c2" data-index="56">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>assuage</td>
+                <td>يهدئ</td>
+                <td>أسويج</td>
+                <td><button class="save-btn" data-level="c2" data-index="57">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>audacious</td>
+                <td>جريء</td>
+                <td>أوديشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="58">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>auspicious</td>
+                <td>ميمون</td>
+                <td>أوسبيشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="59">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>austere</td>
+                <td>صارم</td>
+                <td>أوستير</td>
+                <td><button class="save-btn" data-level="c2" data-index="60">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>avarice</td>
+                <td>طمع</td>
+                <td>أفاريس</td>
+                <td><button class="save-btn" data-level="c2" data-index="61">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>banal</td>
+                <td>مبتذل</td>
+                <td>بانال</td>
+                <td><button class="save-btn" data-level="c2" data-index="62">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>bellicose</td>
+                <td>عدواني</td>
+                <td>بيليكوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="63">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>benevolent</td>
+                <td>خيّر</td>
+                <td>بينيفولنت</td>
+                <td><button class="save-btn" data-level="c2" data-index="64">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>berate</td>
+                <td>يوبّخ</td>
+                <td>بيريت</td>
+                <td><button class="save-btn" data-level="c2" data-index="65">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>bombastic</td>
+                <td>متفاخر</td>
+                <td>بومباستيك</td>
+                <td><button class="save-btn" data-level="c2" data-index="66">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>boorish</td>
+                <td>فظ</td>
+                <td>بوريش</td>
+                <td><button class="save-btn" data-level="c2" data-index="67">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>burgeon</td>
+                <td>ينمو</td>
+                <td>بيرجن</td>
+                <td><button class="save-btn" data-level="c2" data-index="68">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>cacophony</td>
+                <td>نشاز</td>
+                <td>كاكوفوني</td>
+                <td><button class="save-btn" data-level="c2" data-index="69">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>callous</td>
+                <td>قاسٍ</td>
+                <td>كالوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="70">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>candor</td>
+                <td>صراحة</td>
+                <td>كاندور</td>
+                <td><button class="save-btn" data-level="c2" data-index="71">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>capricious</td>
+                <td>متقلب</td>
+                <td>كابريشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="72">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>castigate</td>
+                <td>يعاقب</td>
+                <td>كاستيجيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="73">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>catalyst</td>
+                <td>محفز</td>
+                <td>كاتاليست</td>
+                <td><button class="save-btn" data-level="c2" data-index="74">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>caustic</td>
+                <td>لاذع</td>
+                <td>كوستيك</td>
+                <td><button class="save-btn" data-level="c2" data-index="75">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>censure</td>
+                <td>توبيخ</td>
+                <td>سينشر</td>
+                <td><button class="save-btn" data-level="c2" data-index="76">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>charlatan</td>
+                <td>دجال</td>
+                <td>شارلاتان</td>
+                <td><button class="save-btn" data-level="c2" data-index="77">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>chicanery</td>
+                <td>خداع</td>
+                <td>شيكينيري</td>
+                <td><button class="save-btn" data-level="c2" data-index="78">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>circumspect</td>
+                <td>حذر</td>
+                <td>سيركامسبيكت</td>
+                <td><button class="save-btn" data-level="c2" data-index="79">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>coalesce</td>
+                <td>يندمج</td>
+                <td>كواليس</td>
+                <td><button class="save-btn" data-level="c2" data-index="80">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>cogent</td>
+                <td>مقنع</td>
+                <td>كوجنت</td>
+                <td><button class="save-btn" data-level="c2" data-index="81">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>colloquial</td>
+                <td>عامي</td>
+                <td>كولوكويال</td>
+                <td><button class="save-btn" data-level="c2" data-index="82">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>commensurate</td>
+                <td>متناسب</td>
+                <td>كومينسوريت</td>
+                <td><button class="save-btn" data-level="c2" data-index="83">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>compendium</td>
+                <td>موجز</td>
+                <td>كومبينديوم</td>
+                <td><button class="save-btn" data-level="c2" data-index="84">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>complacent</td>
+                <td>راضٍ عن النفس</td>
+                <td>كومبليسنت</td>
+                <td><button class="save-btn" data-level="c2" data-index="85">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>complicity</td>
+                <td>تواطؤ</td>
+                <td>كومبليسيتي</td>
+                <td><button class="save-btn" data-level="c2" data-index="86">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>conciliatory</td>
+                <td>تصالحي</td>
+                <td>كونسيلياتوري</td>
+                <td><button class="save-btn" data-level="c2" data-index="87">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>conflagration</td>
+                <td>حريق هائل</td>
+                <td>كونفلاجريشن</td>
+                <td><button class="save-btn" data-level="c2" data-index="88">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>congenial</td>
+                <td>ودود</td>
+                <td>كونجينيال</td>
+                <td><button class="save-btn" data-level="c2" data-index="89">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>conjecture</td>
+                <td>تخمين</td>
+                <td>كونجيكتشر</td>
+                <td><button class="save-btn" data-level="c2" data-index="90">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>connive</td>
+                <td>يتواطأ</td>
+                <td>كونايف</td>
+                <td><button class="save-btn" data-level="c2" data-index="91">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>consternation</td>
+                <td>ذعر</td>
+                <td>كونستيرنيشن</td>
+                <td><button class="save-btn" data-level="c2" data-index="92">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>contentious</td>
+                <td>مثير للجدل</td>
+                <td>كونتينشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="93">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>contrite</td>
+                <td>نادم</td>
+                <td>كونترايت</td>
+                <td><button class="save-btn" data-level="c2" data-index="94">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>convoluted</td>
+                <td>معقد</td>
+                <td>كونفوليوتد</td>
+                <td><button class="save-btn" data-level="c2" data-index="95">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>copious</td>
+                <td>وفير</td>
+                <td>كوبياس</td>
+                <td><button class="save-btn" data-level="c2" data-index="96">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>corroborate</td>
+                <td>يؤكد</td>
+                <td>كوروبوريت</td>
+                <td><button class="save-btn" data-level="c2" data-index="97">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>credulous</td>
+                <td>سريع التصديق</td>
+                <td>كريديولوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="98">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>cryptic</td>
+                <td>غامض</td>
+                <td>كريبتيك</td>
+                <td><button class="save-btn" data-level="c2" data-index="99">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>culpable</td>
+                <td>مذنب</td>
+                <td>كالبابل</td>
+                <td><button class="save-btn" data-level="c2" data-index="100">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>cursory</td>
+                <td>سريع</td>
+                <td>كيرسوري</td>
+                <td><button class="save-btn" data-level="c2" data-index="101">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>cynical</td>
+                <td>ساخر</td>
+                <td>سينيكال</td>
+                <td><button class="save-btn" data-level="c2" data-index="102">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>dearth</td>
+                <td>ندرة</td>
+                <td>ديرث</td>
+                <td><button class="save-btn" data-level="c2" data-index="103">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>debacle</td>
+                <td>كارثة</td>
+                <td>ديباكل</td>
+                <td><button class="save-btn" data-level="c2" data-index="104">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>decorous</td>
+                <td>لائق</td>
+                <td>ديكوروس</td>
+                <td><button class="save-btn" data-level="c2" data-index="105">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>decry</td>
+                <td>يستنكر</td>
+                <td>ديكراي</td>
+                <td><button class="save-btn" data-level="c2" data-index="106">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>deference</td>
+                <td>احترام</td>
+                <td>ديفيرنس</td>
+                <td><button class="save-btn" data-level="c2" data-index="107">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>deleterious</td>
+                <td>ضار</td>
+                <td>ديليتيرياس</td>
+                <td><button class="save-btn" data-level="c2" data-index="108">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>delineate</td>
+                <td>يحدد</td>
+                <td>ديلينييت</td>
+                <td><button class="save-btn" data-level="c2" data-index="109">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>demur</td>
+                <td>يعترض</td>
+                <td>ديمير</td>
+                <td><button class="save-btn" data-level="c2" data-index="110">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>denigrate</td>
+                <td>يشوه سمعة</td>
+                <td>دينيجريت</td>
+                <td><button class="save-btn" data-level="c2" data-index="111">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>denouement</td>
+                <td>خاتمة</td>
+                <td>دينومان</td>
+                <td><button class="save-btn" data-level="c2" data-index="112">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>deprecate</td>
+                <td>يستهجن</td>
+                <td>ديبريكيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="113">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>deride</td>
+                <td>يسخر</td>
+                <td>ديرايد</td>
+                <td><button class="save-btn" data-level="c2" data-index="114">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>derivative</td>
+                <td>مشتق</td>
+                <td>ديريفاتيف</td>
+                <td><button class="save-btn" data-level="c2" data-index="115">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>desiccate</td>
+                <td>يجفف</td>
+                <td>ديسيكيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="116">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>desultory</td>
+                <td>عشوائي</td>
+                <td>ديسالتوري</td>
+                <td><button class="save-btn" data-level="c2" data-index="117">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>diatribe</td>
+                <td>هجوم لفظي</td>
+                <td>دايتريب</td>
+                <td><button class="save-btn" data-level="c2" data-index="118">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>didactic</td>
+                <td>تعليمي</td>
+                <td>دايداكتيك</td>
+                <td><button class="save-btn" data-level="c2" data-index="119">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>diffident</td>
+                <td>خجول</td>
+                <td>ديفيدنت</td>
+                <td><button class="save-btn" data-level="c2" data-index="120">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>digress</td>
+                <td>ينحرف</td>
+                <td>دايجريس</td>
+                <td><button class="save-btn" data-level="c2" data-index="121">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>dilettante</td>
+                <td>هاوٍ</td>
+                <td>ديليتانتي</td>
+                <td><button class="save-btn" data-level="c2" data-index="122">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>discern</td>
+                <td>يميّز</td>
+                <td>ديسيرن</td>
+                <td><button class="save-btn" data-level="c2" data-index="123">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>discomfit</td>
+                <td>يربك</td>
+                <td>ديسكومفيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="124">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>discordant</td>
+                <td>متنافر</td>
+                <td>ديسكوردانت</td>
+                <td><button class="save-btn" data-level="c2" data-index="125">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>discrepancy</td>
+                <td>تناقض</td>
+                <td>ديسكريبانسي</td>
+                <td><button class="save-btn" data-level="c2" data-index="126">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>discrete</td>
+                <td>منفصل</td>
+                <td>ديسكريت</td>
+                <td><button class="save-btn" data-level="c2" data-index="127">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>disingenuous</td>
+                <td>غير صادق</td>
+                <td>ديسينجينيوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="128">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>disparage</td>
+                <td>يحتقر</td>
+                <td>ديسباريج</td>
+                <td><button class="save-btn" data-level="c2" data-index="129">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>disparate</td>
+                <td>متباين</td>
+                <td>ديسباريت</td>
+                <td><button class="save-btn" data-level="c2" data-index="130">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>dissemble</td>
+                <td>يتظاهر</td>
+                <td>ديسيمبل</td>
+                <td><button class="save-btn" data-level="c2" data-index="131">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>disseminate</td>
+                <td>ينشر</td>
+                <td>ديسيمينيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="132">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>dissonance</td>
+                <td>تنافر</td>
+                <td>ديسونانس</td>
+                <td><button class="save-btn" data-level="c2" data-index="133">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>distend</td>
+                <td>ينتفخ</td>
+                <td>ديستيند</td>
+                <td><button class="save-btn" data-level="c2" data-index="134">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>dogmatic</td>
+                <td>عقائدي</td>
+                <td>دوجماتيك</td>
+                <td><button class="save-btn" data-level="c2" data-index="135">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>draconian</td>
+                <td>قاسٍ</td>
+                <td>دراكونيان</td>
+                <td><button class="save-btn" data-level="c2" data-index="136">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>dubious</td>
+                <td>مشكوك فيه</td>
+                <td>ديوبياس</td>
+                <td><button class="save-btn" data-level="c2" data-index="137">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>duplicity</td>
+                <td>نفاق</td>
+                <td>ديوبليسيتي</td>
+                <td><button class="save-btn" data-level="c2" data-index="138">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>ebullient</td>
+                <td>متحمس</td>
+                <td>إيباليانت</td>
+                <td><button class="save-btn" data-level="c2" data-index="139">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>eclectic</td>
+                <td>انتقائي</td>
+                <td>إكليكتيك</td>
+                <td><button class="save-btn" data-level="c2" data-index="140">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>efficacy</td>
+                <td>فعالية</td>
+                <td>إيفيكاسي</td>
+                <td><button class="save-btn" data-level="c2" data-index="141">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>effrontery</td>
+                <td>وقاحة</td>
+                <td>إيفرونتري</td>
+                <td><button class="save-btn" data-level="c2" data-index="142">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>egalitarian</td>
+                <td>مساواتي</td>
+                <td>إيجاليتيريان</td>
+                <td><button class="save-btn" data-level="c2" data-index="143">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>egregious</td>
+                <td>فاضح</td>
+                <td>إيجريجياس</td>
+                <td><button class="save-btn" data-level="c2" data-index="144">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>elicit</td>
+                <td>يستخرج</td>
+                <td>إليسيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="145">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>elucidate</td>
+                <td>يوضح</td>
+                <td>إلوسيديت</td>
+                <td><button class="save-btn" data-level="c2" data-index="146">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>emulate</td>
+                <td>يحاكي</td>
+                <td>إيميوليت</td>
+                <td><button class="save-btn" data-level="c2" data-index="147">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>endemic</td>
+                <td>مستوطن</td>
+                <td>إنديميك</td>
+                <td><button class="save-btn" data-level="c2" data-index="148">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>enervate</td>
+                <td>يضعف</td>
+                <td>إينيرفيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="149">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>engender</td>
+                <td>يولّد</td>
+                <td>إنجيندر</td>
+                <td><button class="save-btn" data-level="c2" data-index="150">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>enigmatic</td>
+                <td>غامض</td>
+                <td>إنيجماتيك</td>
+                <td><button class="save-btn" data-level="c2" data-index="151">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>ennui</td>
+                <td>ملل</td>
+                <td>آنوي</td>
+                <td><button class="save-btn" data-level="c2" data-index="152">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>ephemeral</td>
+                <td>زائل</td>
+                <td>إفيميرال</td>
+                <td><button class="save-btn" data-level="c2" data-index="153">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>equanimity</td>
+                <td>رباطة جأش</td>
+                <td>إيكوانيميتي</td>
+                <td><button class="save-btn" data-level="c2" data-index="154">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>equivocal</td>
+                <td>غامض</td>
+                <td>إيكويفوكال</td>
+                <td><button class="save-btn" data-level="c2" data-index="155">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>erudite</td>
+                <td>عالم</td>
+                <td>إيروديت</td>
+                <td><button class="save-btn" data-level="c2" data-index="156">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>eschew</td>
+                <td>يتجنب</td>
+                <td>إيستشيو</td>
+                <td><button class="save-btn" data-level="c2" data-index="157">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>euphemism</td>
+                <td>تلطيف</td>
+                <td>يوفيميزم</td>
+                <td><button class="save-btn" data-level="c2" data-index="158">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>evanescent</td>
+                <td>زائل</td>
+                <td>إيفانيسنت</td>
+                <td><button class="save-btn" data-level="c2" data-index="159">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>exacerbate</td>
+                <td>يفاقم</td>
+                <td>إجزاسيربيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="160">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>exacting</td>
+                <td>صارم</td>
+                <td>إجزاكتينج</td>
+                <td><button class="save-btn" data-level="c2" data-index="161">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>exculpate</td>
+                <td>يبرئ</td>
+                <td>إكسكالبيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="162">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>execrable</td>
+                <td>بغيض</td>
+                <td>إكسيكرابل</td>
+                <td><button class="save-btn" data-level="c2" data-index="163">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>exhort</td>
+                <td>يحث</td>
+                <td>إجزورت</td>
+                <td><button class="save-btn" data-level="c2" data-index="164">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>exigent</td>
+                <td>ملح</td>
+                <td>إكسيجنت</td>
+                <td><button class="save-btn" data-level="c2" data-index="165">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>existential</td>
+                <td>وجودي</td>
+                <td>إجزيستينشال</td>
+                <td><button class="save-btn" data-level="c2" data-index="166">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>exonerate</td>
+                <td>يبرئ</td>
+                <td>إجزونيريت</td>
+                <td><button class="save-btn" data-level="c2" data-index="167">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>expedient</td>
+                <td>مناسب</td>
+                <td>إكسبيديانت</td>
+                <td><button class="save-btn" data-level="c2" data-index="168">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>expiate</td>
+                <td>يكفّر</td>
+                <td>إكسبييت</td>
+                <td><button class="save-btn" data-level="c2" data-index="169">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>explicate</td>
+                <td>يشرح</td>
+                <td>إكسبليكيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="170">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>expunge</td>
+                <td>يمحو</td>
+                <td>إكسبانج</td>
+                <td><button class="save-btn" data-level="c2" data-index="171">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>expurgate</td>
+                <td>ينقّح</td>
+                <td>إكسبيرجيت</td>
+                <td><button class="save-btn" data-level="c2" data-index="172">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>extant</td>
+                <td>موجود</td>
+                <td>إكستانت</td>
+                <td><button class="save-btn" data-level="c2" data-index="173">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>extol</td>
+                <td>يمجّد</td>
+                <td>إكستول</td>
+                <td><button class="save-btn" data-level="c2" data-index="174">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>extraneous</td>
+                <td>خارجي</td>
+                <td>إكسترينياس</td>
+                <td><button class="save-btn" data-level="c2" data-index="175">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>extrapolate</td>
+                <td>يستنتج</td>
+                <td>إكسترابوليت</td>
+                <td><button class="save-btn" data-level="c2" data-index="176">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>facile</td>
+                <td>سهل</td>
+                <td>فاسيل</td>
+                <td><button class="save-btn" data-level="c2" data-index="177">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>fallacious</td>
+                <td>خاطئ</td>
+                <td>فالاشس</td>
+                <td><button class="save-btn" data-level="c2" data-index="178">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>fastidious</td>
+                <td>دقيق</td>
+                <td>فاستيدياس</td>
+                <td><button class="save-btn" data-level="c2" data-index="179">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>fatuous</td>
+                <td>سخيف</td>
+                <td>فاتشوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="180">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>feckless</td>
+                <td>غير مسؤول</td>
+                <td>فيكليس</td>
+                <td><button class="save-btn" data-level="c2" data-index="181">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>fecund</td>
+                <td>خصب</td>
+                <td>فيكاند</td>
+                <td><button class="save-btn" data-level="c2" data-index="182">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>felicitous</td>
+                <td>مناسب</td>
+                <td>فيليسيتوس</td>
+                <td><button class="save-btn" data-level="c2" data-index="183">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>feral</td>
+                <td>وحشي</td>
+                <td>فيرال</td>
+                <td><button class="save-btn" data-level="c2" data-index="184">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>fervent</td>
+                <td>متحمس</td>
+                <td>فيرفنت</td>
+                <td><button class="save-btn" data-level="c2" data-index="185">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>fervid</td>
+                <td>حماسي</td>
+                <td>فيرفيد</td>
+                <td><button class="save-btn" data-level="c2" data-index="186">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>fetid</td>
+                <td>كريه الرائحة</td>
+                <td>فيتيد</td>
+                <td><button class="save-btn" data-level="c2" data-index="187">⭕ حفظ</button></td>
+            </tr>
+            <tr>
+                <td>fidelity</td>
+                <td>إخلاص</td>
+                <td>فيديليتي</td>
+                <td><button class="save-btn" data-level="c2" data-index="188">⭕ حفظ</button></td>
+            </tr>
+        </tbody>
+        </table></div>
+        
+        <div style="text-align: center; padding: 2rem; background: #f8f9fa; margin-top: 2rem;">
+            <h3 style="color: #333; margin-bottom: 1rem;">تقديم: تقي الدين طالب</h3>
+            <p style="color: #666; font-size: 1.1rem;">🤲 لا تنسانا من الدعاء</p>
+        </div>
+    </div>
+
+        
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Firebase Configuration -->
+    <script src="firebase-config.js"></script>
+    <script src="firebase-main.js"></script>
+<script src="progress-system.js"></script>
+
+    
+    
+    <script src="script.js"></script>
+<script>
+// نظام حفظ بسيط يعمل مباشرة في المتصفح
+(function() {
+    'use strict';
+    
+    // إنشاء كائن عام للنظام
+    window.SaveSystem = {
+        // حفظ عنصر
+        save: function(level, type, index) {
+            try {
+                // قراءة البيانات الحالية
+                let data = JSON.parse(localStorage.getItem('courseProgress') || '{}');
+                
+                // التأكد من وجود المستوى
+                if (!data[level]) {
+                    data[level] = {};
+                }
+                
+                // التأكد من وجود النوع
+                if (!data[level][type]) {
+                    data[level][type] = {};
+                }
+                
+                // تبديل الحالة
+                if (data[level][type][index]) {
+                    delete data[level][type][index];
+                    // إزالة من نظام التكرار المتباعد
+                    if (window.SpacedRepetition) {
+                        window.SpacedRepetition.removeItem(level, type, index);
+                    }
+                } else {
+                    data[level][type][index] = {
+                        saved: true,
+                        date: new Date().toISOString()
+                    };
+                    
+                    // إضافة إلى نظام التكرار المتباعد
+                    if (window.SpacedRepetition) {
+                        // استخراج بيانات الكلمة من الصف
+                        const button = event.target;
+                        const row = button.closest('tr');
+                        const cells = row.querySelectorAll('td');
+                        
+                        if (cells.length >= 3) {
+                            const itemData = {
+                                english: cells[0].textContent.trim(),
+                                arabic: cells[1].textContent.trim(),
+                                pronunciation: cells[2].textContent.trim()
+                            };
+                            
+                            window.SpacedRepetition.addItem(level, type, index, itemData);
+                        }
+                    }
+                }
+                
+                // حفظ البيانات
+                localStorage.setItem('courseProgress', JSON.stringify(data));
+                
+                // تحديث الواجهة
+                this.updateUI(level, type);
+                
+                return true;
+            } catch (e) {
+                console.error('خطأ في الحفظ:', e);
+                alert('حدث خطأ في الحفظ. الرجاء المحاولة مرة أخرى.');
+                return false;
+            }
+        },
+        
+        // التحقق من حالة الحفظ
+        isSaved: function(level, type, index) {
+            try {
+                let data = JSON.parse(localStorage.getItem('courseProgress') || '{}');
+                return !!(data[level] && data[level][type] && data[level][type][index]);
+            } catch (e) {
+                return false;
+            }
+        },
+        
+        // تحديث واجهة المستخدم
+        updateUI: function(level, type) {
+            // تحديث جميع الأزرار في الصفحة
+            let buttons = document.querySelectorAll('.save-btn');
+            buttons.forEach(btn => {
+                let btnLevel = btn.getAttribute('data-level');
+                let btnType = btn.getAttribute('data-type');
+                let btnIndex = btn.getAttribute('data-index');
+                
+                if (btnLevel === level && btnType === type) {
+                    if (this.isSaved(level, type, btnIndex)) {
+                        btn.textContent = '✅ محفوظ';
+                        btn.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+                        btn.parentElement.parentElement.style.background = '#d4edda';
+                    } else {
+                        btn.textContent = '⭕ حفظ';
+                        btn.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+                        btn.parentElement.parentElement.style.background = '';
+                    }
+                }
+            });
+            
+            // تحديث شريط التقدم
+            this.updateProgressBar(level, type);
+        },
+        
+        // تحديث شريط التقدم
+        updateProgressBar: function(level, type) {
+            let buttons = document.querySelectorAll(`.save-btn[data-level="${level}"][data-type="${type}"]`);
+            let total = buttons.length;
+            let saved = 0;
+            
+            buttons.forEach(btn => {
+                let index = btn.getAttribute('data-index');
+                if (this.isSaved(level, type, index)) {
+                    saved++;
+                }
+            });
+            
+            let percentage = total > 0 ? Math.round((saved / total) * 100) : 0;
+            
+            // تحديث شريط التقدم إذا كان موجوداً
+            let progressBar = document.querySelector('.progress-bar');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+                progressBar.textContent = `${saved}/${total} (${percentage}%)`;
+            }
+            
+            // تحديث النص في الأعلى
+            let progressText = document.querySelector('.progress-text');
+            if (progressText) {
+                progressText.textContent = `📊 التقدم في هذه الصفحة: ${saved}/${total} ${percentage}%`;
+            }
+        },
+        
+        // تهيئة الصفحة
+        init: function(level, type) {
+            // تحديث جميع الأزرار عند تحميل الصفحة
+            let buttons = document.querySelectorAll('.save-btn');
+            buttons.forEach(btn => {
+                let btnLevel = btn.getAttribute('data-level');
+                let btnType = btn.getAttribute('data-type');
+                let btnIndex = btn.getAttribute('data-index');
+                
+                if (this.isSaved(btnLevel, btnType, btnIndex)) {
+                    btn.textContent = '✅ محفوظ';
+                    btn.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+                    btn.parentElement.parentElement.style.background = '#d4edda';
+                }
+            });
+            
+            // تحديث شريط التقدم
+            if (level && type) {
+                this.updateProgressBar(level, type);
+            }
+        },
+        
+        // الحصول على الإحصائيات
+        getStats: function() {
+            try {
+                let data = JSON.parse(localStorage.getItem('courseProgress') || '{}');
+                let stats = {
+                    total: 0,
+                    byLevel: {}
+                };
+                
+                for (let level in data) {
+                    stats.byLevel[level] = {
+                        sentences: 0,
+                        vocabulary: 0,
+                        total: 0
+                    };
+                    
+                    if (data[level].sentences) {
+                        stats.byLevel[level].sentences = Object.keys(data[level].sentences).length;
+                    }
+                    
+                    if (data[level].vocabulary) {
+                        stats.byLevel[level].vocabulary = Object.keys(data[level].vocabulary).length;
+                    }
+                    
+                    stats.byLevel[level].total = stats.byLevel[level].sentences + stats.byLevel[level].vocabulary;
+                    stats.total += stats.byLevel[level].total;
+                }
+                
+                return stats;
+            } catch (e) {
+                console.error('خطأ في قراءة الإحصائيات:', e);
+                return { total: 0, byLevel: {} };
+            }
+        }
+    };
+    
+    console.log('✅ نظام الحفظ جاهز!');
+})();
+
+
+</script>
+
+<script>
+(function() {
+    const level = document.body.getAttribute('data-level');
+    const type = document.body.getAttribute('data-type');
+    
+    if (!level || !type) return;
+    
+    // Create fixed progress bar
+    const bar = document.createElement('div');
+    bar.className = 'fixed-progress-bar';
+    bar.innerHTML = `
+        <div class="progress-content">
+            <div class="progress-row">
+                <div class="progress-label">📊 التقدم في الحفظ: <span id="save-count">0</span>/<span id="total-count">0</span> (<span id="save-percent">0</span>%)</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="save-fill"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    `;
+    document.body.insertBefore(bar, document.body.firstChild);
+    
+    // Update save progress
+    function updateSaveProgress() {
+        const total = document.querySelectorAll('tbody tr').length;
+        
+        // قراءة البيانات من نظام SpacedRepetition
+        let saved = 0;
+        if (window.SpacedRepetition) {
+            const allItems = window.SpacedRepetition.getAllItems(level, type);
+            saved = allItems.length;
+        }
+        
+        const percent = total > 0 ? Math.round((saved / total) * 100) : 0;
+        
+        document.getElementById('save-count').textContent = saved;
+        document.getElementById('total-count').textContent = total;
+        document.getElementById('save-percent').textContent = percent;
+        document.getElementById('save-fill').style.width = percent + '%';
+    }
+    
+    
+    
+    // Initialize
+    updateSaveProgress();
+    
+    
+    // Listen for changes
+    
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('save-btn')) {
+            setTimeout(updateSaveProgress, 200);
+        }
+    });
+    
+    // Update periodically
+    setInterval(updateSaveProgress, 1000);
+})();
+</script>
+
+    <script src="click-sound.js"></script>
+</body>
+</html>
+

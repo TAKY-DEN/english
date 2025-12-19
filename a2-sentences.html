@@ -1642,6 +1642,162 @@ function speakText(text, index) {
 </script>
 
     <script src="click-sound.js"></script>
+    <script>
+window.addEventListener('load', function() {
+    const level = 'a2';
+    const type = 'sentence';
+    
+    // Initialize SpacedRepetition
+    const sr = window.SpacedRepetition;
+    
+    // Clean up corrupted data from old code
+    (function cleanupCorruptedData() {
+        const data = JSON.parse(localStorage.getItem('spacedRepetitionData') || '{}');
+        let cleaned = false;
+        
+        Object.keys(data).forEach(key => {
+            // Remove items with corrupted keys (containing [object Object])
+            if (key.includes('[object Object]') || key.includes('undefined')) {
+                console.log('Removing corrupted item:', key);
+                delete data[key];
+                cleaned = true;
+            }
+            // Remove items with corrupted level or type
+            else if (data[key] && (typeof data[key].level !== 'string' || typeof data[key].type !== 'string')) {
+                console.log('Removing item with corrupted level/type:', key);
+                delete data[key];
+                cleaned = true;
+            }
+        });
+        
+        if (cleaned) {
+            localStorage.setItem('spacedRepetitionData', JSON.stringify(data));
+            console.log('✅ Cleaned up corrupted data');
+        }
+    })();
+    
+    // Update progress bar
+    function updateProgressBar() {
+        // Count saved words directly
+        const allItems = sr.getAllItems();
+        const savedCount = allItems.filter(item => 
+            item.level === level && item.type === type
+        ).length;
+        const totalWords = 991;
+        
+        document.getElementById('saved-count').textContent = savedCount;
+        document.getElementById('save-progress').style.width = (savedCount / totalWords * 100) + '%';
+    }
+    
+    // Update scroll progress
+    function updateScrollProgress() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+        document.getElementById('scroll-progress').style.width = scrollPercent + '%';
+    }
+    
+    window.addEventListener('scroll', updateScrollProgress);
+    
+    // Load saved words
+    function loadSavedWords() {
+        const cards = document.querySelectorAll('.sentence-card');
+        const savedItems = sr.getAllItems();
+        
+        cards.forEach(card => {
+            const index = card.dataset.index;
+            const btn = card.querySelector('.save-btn');
+            const itemKey = `${level}_${type}_${index}`;
+            
+            // Check if this item is saved
+            const isSaved = savedItems.some(item => 
+                item.level === level && 
+                item.type === type && 
+                item.id === index
+            );
+            
+            if (isSaved) {
+                btn.classList.add('saved');
+                btn.textContent = '✅ محفوظ';
+                card.classList.add('saved');
+            }
+        });
+        
+        updateProgressBar();
+    }
+    
+    // Handle save button clicks
+    document.querySelectorAll('.save-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const card = this.closest('.sentence-card');
+            const index = card.dataset.index;
+            const itemId = `${level}_${type}_${index}`;
+            
+            const english = card.querySelector('.english-row .row-content').textContent;
+            const arabic = card.querySelector('.arabic-row .row-content').textContent;
+            const pronunciation = card.querySelector('.pronunciation-row .row-content').textContent;
+            
+            if (this.classList.contains('saved')) {
+                sr.removeItem(level, type, index);
+                this.classList.remove('saved');
+                this.textContent = '💾 حفظ';
+            } else {
+                sr.addItem(level, type, index, {
+                    english,
+                    arabic,
+                    pronunciation
+                });
+                this.classList.add('saved');
+                this.textContent = '✅ محفوظ';
+                
+                // Play click sound
+                const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIGGS57OihUBELTKXh8LdjHAU7k9jyz3ksBS1+zPDajz8KFV+16+qnVRQKRp/g8r5sIQUrgc7y2Yk2CBhkuezooVARDEyl4fC3YxwFO5PY8s95LAUtfsz');
+                audio.volume = 0.3;
+                audio.play().catch(() => {});
+            }
+            
+            updateProgressBar();
+        });
+    });
+    
+
+    // Categories Filter
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const cards = document.querySelectorAll('.sentence-card');
+    
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.dataset.category;
+            
+            // Update active button
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.dataset.category === category) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+
+    
+    // Initialize
+    loadSavedWords();
+    updateScrollProgress();
+});
+
+    </script>
 </body>
 </html>
 
